@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588843081359">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588851499459">-->
 
    
     <style>
@@ -55,17 +55,17 @@
   </div>
   <div id="nexmoe-header">
       <div class="nexmoe-drawer mdui-drawer" id="drawer">
-    <div class="nexmoe-avatar mdui-ripple">
+    <div class="nexmoe-avatar mdui-ripple" style="width:calc(100% - 80px)">
         <a href="/" title="Mr.wang">
             <img src="http://39.107.253.141/eeb88387bfc51b95-93f3add4d906f851-42f9e31d4b34267dd2fd4b0d39d0e49e.jpg" alt="Mr.wang" alt="Mr.wang">
         </a>
     </div>
-    <div class="nexmoe-count" style="border-radius:15px;background:white;padding:15px 10px;margin:20px;">
+    <div class="nexmoe-count" style="border-radius:15px;background:white;padding:15px 10px;margin:20px 20px 20px 20px;box-shadow:0 0 1rem rgba(161,177,204,.4);">
         <div><span>文章</span>12</div>
         <div><span>标签</span>10</div>
         <div><span>分类</span>4</div>
     </div>
-    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}" style="background-color:white;border-radius:15px;margin:10px 20px;">
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}" style="background-color:white;border-radius:15px;margin:20px 20px 20px 20px;box-shadow:0 0 1rem rgba(161,177,204,.4);">
         
         <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
             <i class="mdui-list-item-icon nexmoefont icon-home"></i>
@@ -98,7 +98,7 @@
     </div>
     <aside id="nexmoe-sidebar">
   
-  <div class="nexmoe-widget-wrap">
+  <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
     <div class="nexmoe-widget nexmoe-search">
         <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
             <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
@@ -106,7 +106,7 @@
     </div>
 </div>
   
-  <div class="nexmoe-widget-wrap">
+  <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
     <h3 class="nexmoe-widget-title">社交按钮</h3>
     <div class="nexmoe-widget nexmoe-social">
         <a class="mdui-ripple" href="https://www.bilibili.com/?spm_id_from=333.999.b_696e7465726e6174696f6e616c486561646572.1" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
@@ -118,7 +118,7 @@
 </div>
   
   
-  <div class="nexmoe-widget-wrap">
+  <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
     <h3 class="nexmoe-widget-title">文章分类</h3>
     <div class="nexmoe-widget">
 
@@ -166,7 +166,7 @@
 
   
   
-  <div class="nexmoe-widget-wrap">
+  <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
     <h3 class="nexmoe-widget-title">标签云</h3>
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
       <a href="/tags/CentOS7/" style="font-size: 10px;">CentOS7</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/I-O/" style="font-size: 10px;">I/O</a> <a href="/tags/Math%E5%B7%A5%E5%85%B7%E7%B1%BB/" style="font-size: 10px;">Math工具类</a> <a href="/tags/javaSE/" style="font-size: 20px;">javaSE</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/" style="font-size: 10px;">动态规划算法</a> <a href="/tags/%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B%E5%92%8C%E5%90%91%E4%B8%8B%E8%BD%AC%E5%9E%8B/" style="font-size: 10px;">向上转型和向下转型</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 10px;">多线程</a> <a href="/tags/%E9%9B%86%E5%90%88/" style="font-size: 10px;">集合</a>
@@ -176,7 +176,7 @@
 
   
   
-  <div class="nexmoe-widget-wrap">
+  <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li></ul>
@@ -194,8 +194,8 @@
 </div><!-- .nexmoe-drawer -->
   </div>
   <div id="nexmoe-content">
-    <div class="nexmoe-primary">
-        <div class="nexmoe-post">
+    <div class="nexmoe-primary" style="box-shadow: none;padding:25px;margin:15px;border-radius:15px;">
+        <div class="nexmoe-post" style="background: white;padding:25px; border-radius: 15px;">
   
       <div class="nexmoe-post-cover" style="padding-bottom: 37.5%;"> 
           <img data-src="http://39.107.253.141/7.jpg" data-sizes="auto" alt="集合" class="lazyload">
@@ -247,7 +247,7 @@ U2FsdGVkX1/BPVzicN5moSuSXkF+adMetbYtOx8YeM0meh12KGvGIfU3/2GIAkq6Z6eHGPxWXWZWOU0S
     
 </div>
 
-  <div class="nexmoe-post-footer">
+  <div class="nexmoe-post-footer" style="margin:25px 0px 0px 0px;">
     
       
   <div class="nexmoe-post-copyright">
@@ -278,7 +278,7 @@ U2FsdGVkX1/BPVzicN5moSuSXkF+adMetbYtOx8YeM0meh12KGvGIfU3/2GIAkq6Z6eHGPxWXWZWOU0S
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588843081360"></script>-->
+<!--<script src="/js/app.js?v=1588851499461"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
