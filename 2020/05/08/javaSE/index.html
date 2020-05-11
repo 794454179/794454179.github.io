@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  
+  <title>JavaSE - My-Blog</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
+  <meta name="description" content="Java：构造方法、this修饰符、访问权限修饰符、多态、抽象、static关键字、常用类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaSE">
+<meta property="og:url" content="http://yoursite.com/2020/05/08/javaSE/index.html">
+<meta property="og:site_name" content="My-Blog">
+<meta property="og:description" content="Java：构造方法、this修饰符、访问权限修饰符、多态、抽象、static关键字、常用类">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1588945722929.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1588946227329.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1588946271012.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589001234740.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589002802380.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589003667297.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589006028894.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589005127357.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589006371928.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589006965563.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589007652978.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589010219324.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589011208182.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589013389492.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589015977498.png">
+<meta property="article:published_time" content="2020-05-08T12:46:25.000Z">
+<meta property="article:modified_time" content="2020-05-11T07:07:35.232Z">
+<meta property="article:author" content="Mr.wang">
+<meta property="article:tag" content="JavaSE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/08/javaSE/1588945722929.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
+  
+  <!--<link rel="stylesheet" href="/css/style.css?v=1589181118858">-->
+
+   
+    <style>
+      .nexmoe-avatar img:hover {
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+      }	
+    </style>
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(http://39.107.253.141/13.jpg);opacity: 1;filter: none;"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="Mr.wang" class="mdui-btn mdui-btn-icon"><img src="http://39.107.253.141/eeb88387bfc51b95-93f3add4d906f851-42f9e31d4b34267dd2fd4b0d39d0e49e.jpg" alt="Mr.wang"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple" style="width:calc(100% - 80px)">
+        <a href="/" title="Mr.wang">
+            <img src="http://39.107.253.141/eeb88387bfc51b95-93f3add4d906f851-42f9e31d4b34267dd2fd4b0d39d0e49e.jpg" alt="Mr.wang" alt="Mr.wang">
+        </a>
+    </div>
+    <div class="nexmoe-count" style="border-radius:15px;background:white;padding:15px 10px;margin:20px 20px 20px 20px;box-shadow:0 0 1rem rgba(161,177,204,.4);">
+        <div><span>文章</span>9</div>
+        <div><span>标签</span>9</div>
+        <div><span>分类</span>5</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}" style="background-color:white;border-radius:15px;margin:20px 20px 20px 20px;box-shadow:0 0 1rem rgba(161,177,204,.4);">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/friends" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about" title="关于我">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于我
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://www.bilibili.com/?spm_id_from=333.999.b_696e7465726e6174696f6e616c486561646572.1" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/CentOS7/">CentOS7</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/JavaSE/">JavaSE</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/MySQL/">MySQL</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/算法/">算法</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/设计/">设计</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
+    <h3 class="nexmoe-widget-title">标签云</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CentOS7/" style="font-size: 10px;">CentOS7</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/I-O/" style="font-size: 10px;">I/O</a> <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/Java%E9%9B%86%E5%90%88/" style="font-size: 10px;">Java集合</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/" style="font-size: 10px;">动态规划算法</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 10px;">多线程</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 Mr.wang
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary" style="box-shadow: none;padding:25px;margin:15px;border-radius:15px;">
+        <div class="nexmoe-post" style="background: white;padding:25px; border-radius: 15px;">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 37.5%;"> 
+          <img data-src="http://39.107.253.141/11.jpg" data-sizes="auto" alt="JavaSE" class="lazyload">
+          <h1>JavaSE</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月08日</a>
+    <a><i class="nexmoefont icon-areachart"></i>2.7k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 12 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+  </div>
+
+  <article>
+    <p>Java：构造方法、this修饰符、访问权限修饰符、多态、抽象、static关键字、常用类<a id="more"></a></p>
+<h2 id="一、知识点总结"><a href="#一、知识点总结" class="headerlink" title="一、知识点总结"></a>一、知识点总结</h2><h3 id="1、构造方法"><a href="#1、构造方法" class="headerlink" title="1、构造方法"></a>1、构造方法</h3><p>（1）作用：专门用来创建对象的，并且可以初始化属性的值。</p>
+<p>（2）如果代码中，没有构造方法，编译器会自动添加一个无参的构造。</p>
+<p>（3）如果代码中，写了构造方法，编译器都不会再添加无参的构造方法。</p>
+<p>（4）编码习惯：写了有参构造，再写上无参构造。</p>
+<p>（5）无返回值（也不能写void）；方法名必须和类名一致；修饰符最多只能访问权限为public；</p>
+<p>（6）每当创建一个对象，就会调用一次，执行1次。</p>
+<h3 id="2、this修饰符"><a href="#2、this修饰符" class="headerlink" title="2、this修饰符"></a>2、this修饰符</h3><h4 id="2-1-this用法一"><a href="#2-1-this用法一" class="headerlink" title="2.1  this用法一"></a>2.1  this用法一</h4><p>（1）词义：表示当前对象。（谁调用谁就是当前的对象 ）</p>
+<p>（2）一个类中，成员变量和局部变量名字可以一样。但遵循就近原则。二者都有并使用时离哪个声明近就是哪个变量。</p>
+<p>（3）使用this，就是告诉编译器，this后面的变量是成员变量。</p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1588945722929.png" alt="58894572292" class="lazyload"></p>
+<h4 id="2-2-this用法二"><a href="#2-2-this用法二" class="headerlink" title="2.2  this用法二"></a>2.2  this用法二</h4><p>（1）this()指代当前类的构造方法。</p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1588946227329.png" alt="58894633651" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1588946271012.png" alt="58894627101" class="lazyload"></p>
+<h3 id="3、访问权限修饰符（public、private……）"><a href="#3、访问权限修饰符（public、private……）" class="headerlink" title="3、访问权限修饰符（public、private……）"></a>3、访问权限修饰符（public、private……）</h3><p>​    private：私有的。本类中。</p>
+<p>​    默认的（default）：啥修饰符都不写，就是默认。本类，同包下可以访问。</p>
+<p>​    protected：受保护的。本类，同包下，不同包只有其子类可用。</p>
+<p>​    public：没有限制。</p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589001234740.png" alt="58900123474" class="lazyload"></p>
+<h3 id="4、多态、向上转型、向下转型、instanceof"><a href="#4、多态、向上转型、向下转型、instanceof" class="headerlink" title="4、多态、向上转型、向下转型、instanceof"></a>4、多态、向上转型、向下转型、instanceof</h3><p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589002802380.png" alt="58900490782" class="lazyload"></p>
+<h4 id="4-1-对象的向上转型-其实就是【多态】-写法"><a href="#4-1-对象的向上转型-其实就是【多态】-写法" class="headerlink" title="4.1 对象的向上转型(其实就是【多态】 写法)"></a>4.1 对象的向上转型(其实就是【多态】 写法)</h4><h5 id="4-1-1-格式"><a href="#4-1-1-格式" class="headerlink" title="4.1.1 格式"></a>4.1.1 格式</h5><p>​    父类名称 对象名 = new 子类名称();    </p>
+<h5 id="4-1-2-含义"><a href="#4-1-2-含义" class="headerlink" title="4.1.2 含义"></a>4.1.2 含义</h5><p>​    右侧创建一个子类对象，把它当做父类来看待使用。</p>
+<h5 id="4-1-3-注意事项"><a href="#4-1-3-注意事项" class="headerlink" title="4.1.3 注意事项"></a>4.1.3 注意事项</h5><p>​    向上转型一定是安全的。从小范围转向了大范围。</p>
+<h5 id="4-1-4-举例"><a href="#4-1-4-举例" class="headerlink" title="4.1.4 举例"></a>4.1.4 举例</h5><p>​    Animal animal =new Cat();</p>
+<p>​    创建了一只猫，当作动物看待。</p>
+<p>​    从小范围的猫，向上转型成为更大范围的动物。</p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589003667297.png" alt="58900366729" class="lazyload"></p>
+<h4 id="4-2-对象的向下转型（其实就是【还原】的动作）"><a href="#4-2-对象的向下转型（其实就是【还原】的动作）" class="headerlink" title="4.2 对象的向下转型（其实就是【还原】的动作）"></a>4.2 对象的向下转型（其实就是【还原】的动作）</h4><h5 id="4-2-1-格式"><a href="#4-2-1-格式" class="headerlink" title="4.2.1 格式"></a>4.2.1 格式</h5><p>​    子类名称 对象名 =（子类名称） 对象父类；</p>
+<h5 id="4-2-2-含义"><a href="#4-2-2-含义" class="headerlink" title="4.2.2 含义"></a>4.2.2 含义</h5><p>​    将父类对象，【还原】成为本来的子类对象。</p>
+<h5 id="4-2-3-注意事项"><a href="#4-2-3-注意事项" class="headerlink" title="4.2.3 注意事项"></a>4.2.3 注意事项</h5><p>​    （1）必须保证对象本来创建的时候，就是猫，才能向下转型成为猫。</p>
+<p>​    （2）如果对象创建的时候本来不是猫，现在非要向下转型成为猫，就会报错。</p>
+<h5 id="4-2-4-举例"><a href="#4-2-4-举例" class="headerlink" title="4.2.4 举例"></a>4.2.4 举例</h5><p>​    Animal animal =new Cat();    //本来是猫，向上转型为动物。</p>
+<p>​    Cat cat = (Cat)animal;        //本来是猫，已经被当作动物了，还原回来成为本来的猫</p>
+<h4 id="4-3-instanceof关键字"><a href="#4-3-instanceof关键字" class="headerlink" title="4.3 instanceof关键字"></a>4.3 instanceof关键字</h4><h5 id="4-3-1-定义"><a href="#4-3-1-定义" class="headerlink" title="4.3.1 定义"></a>4.3.1 定义</h5><p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589006028894.png" alt="58900602889" class="lazyload"></p>
+<h5 id="4-3-2-使用"><a href="#4-3-2-使用" class="headerlink" title="4.3.2 使用"></a>4.3.2 使用</h5><p>（作用：判断a5类型是不是cat  返回值是true或false）</p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589005127357.png" alt="58900512735" class="lazyload"></p>
+<h4 id="4-4-对象的多态性的应用"><a href="#4-4-对象的多态性的应用" class="headerlink" title="4.4 对象的多态性的应用"></a>4.4 对象的多态性的应用</h4><p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589006371928.png" alt="58900637192" class="lazyload"></p>
+<h4 id="4-5-聊聊多态性"><a href="#4-5-聊聊多态性" class="headerlink" title="4.5 聊聊多态性"></a>4.5 聊聊多态性</h4><p>多态性：事物的多种形态</p>
+<p>​    方法：方法的多种形态，指的就是方法的重载。一个功能方法，但是根据参数的不同，执行的具体方法也不同。（也叫做静态多态。程序编译时发生的多态）</p>
+<p>​    对象：对象的多态性，结合方法的重写。一个子类对象，如果看成父类的类型，那么执行的方法就只能父类的以及子类重写的（向上转型）；如果再把该对象向下转型为子类类型，才可以执行子类的新增方法（向下转型）。（整个也叫做动态多态。）</p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589006965563.png" alt="58900696556" class="lazyload"></p>
+<h3 id="5、抽象（abstract关键字）"><a href="#5、抽象（abstract关键字）" class="headerlink" title="5、抽象（abstract关键字）"></a>5、抽象（abstract关键字）</h3><p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589007652978.png" alt="58900765297" class="lazyload"></p>
+<h3 id="6、static关键字"><a href="#6、static关键字" class="headerlink" title="6、static关键字"></a>6、static关键字</h3><h4 id="6-1-修饰属性"><a href="#6-1-修饰属性" class="headerlink" title="6.1 修饰属性"></a>6.1 修饰属性</h4><p>​    存放在专门数据区（不放在栈，也不再堆），随着类的加载而创建。</p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589010219324.png" alt="58901021932" class="lazyload"></p>
+<h4 id="6-2-修饰方法"><a href="#6-2-修饰方法" class="headerlink" title="6.2 修饰方法"></a>6.2 修饰方法</h4><p>​    一个方法，一旦使用static修饰，就表示该方法属于类，应该由类来直接调用。</p>
+<h4 id="6-3-总结"><a href="#6-3-总结" class="headerlink" title="6.3 总结"></a>6.3 总结</h4><p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589011208182.png" alt="58901120818" class="lazyload"></p>
+<h3 id="7、常用类"><a href="#7、常用类" class="headerlink" title="7、常用类"></a>7、常用类</h3><p>（Object类、String类、Math类、bigdecimal(精确值)类、随机数类、日期类）</p>
+<h4 id="7-1-Object类"><a href="#7-1-Object类" class="headerlink" title="7.1 Object类"></a>7.1 Object类</h4><p>所有类的根基，Java中的所有的类，都会直接或间接的继承Object类。</p>
+<p>只要是java中的类对象，默认都可以调用Object类中的方法。</p>
+<ul>
+<li>如果一个方法的参数为Object类型，实际可以传入任意的类对象。</li>
+<li>如果一个方法的返回值是Object类型，实际上可以返回任意的类对象。</li>
+</ul>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589013389492.png" alt="58901338949" class="lazyload"></p>
+<h5 id="（1）getClass-–-gt-Class，未完待续—-gt-反射"><a href="#（1）getClass-–-gt-Class，未完待续—-gt-反射" class="headerlink" title="（1）getClass()–&gt;Class，未完待续—&gt;反射"></a>（1）getClass()–&gt;Class，未完待续—&gt;反射</h5><p>​    返回一个对象运行时的类类型。</p>
+<p>​     对象.getClass()—&gt;返回该对象所属的类的字节码文件对象。</p>
+<p>​     理解为：返回的是堆中的实际的对象的类型</p>
+<h5 id="（2）hashCode-—-gt-int，获取对象的哈希码"><a href="#（2）hashCode-—-gt-int，获取对象的哈希码" class="headerlink" title="（2）hashCode()—&gt;int，获取对象的哈希码"></a>（2）hashCode()—&gt;int，获取对象的哈希码</h5><p>​     每当产生一个对象的时候，都是由哈希算法计算出该对象的哈希值。</p>
+<h5 id="（3）toString-—-gt-String，返回一个对象的字符串表示形式"><a href="#（3）toString-—-gt-String，返回一个对象的字符串表示形式" class="headerlink" title="（3）toString()—&gt;String，返回一个对象的字符串表示形式"></a>（3）toString()—&gt;String，返回一个对象的字符串表示形式</h5><p>​     对象.toString()—&gt;String，描述这个对象的。</p>
+<p>​     Object类：对于toString()–&gt;获取的是对象的内存地址(逻辑地址)</p>
+<blockquote>
+<p>eclipse快捷键：shift + alt + s，可以自动生成toString()。</p>
+<p>idea快捷键：alt + insert</p>
+</blockquote>
+<h5 id="（4）equals-–-gt-boolean，用于比较两个对象是否相等。（实际上是比较了对象的内存地址）"><a href="#（4）equals-–-gt-boolean，用于比较两个对象是否相等。（实际上是比较了对象的内存地址）" class="headerlink" title="（4）equals()–&gt;boolean，用于比较两个对象是否相等。（实际上是比较了对象的内存地址）"></a>（4）equals()–&gt;boolean，用于比较两个对象是否相等。（实际上是比较了对象的内存地址）</h5><ul>
+<li>==：专门比较数值，是否相等。适合8个基本数据类型：byte，short，int，long，float，double，char，boolean</li>
+<li>equals()，在Object类中，提供了一个方法equals()，专门用于判断对象是否相等（比较对象的内存地址）。</li>
+</ul>
+<h4 id="7-2-String类"><a href="#7-2-String类" class="headerlink" title="7.2 String类"></a>7.2 String类</h4><h5 id="（1）String类，StringBuffer类，StringBuilder类"><a href="#（1）String类，StringBuffer类，StringBuilder类" class="headerlink" title="（1）String类，StringBuffer类，StringBuilder类"></a>（1）String类，StringBuffer类，StringBuilder类</h5><ul>
+<li><p>String类：字符串，内容不可以改变。</p>
+</li>
+<li><p>StringBuffer和StringBuilder：内容可以改变。</p>
+<ul>
+<li>StringBuffer是线程安全的，效率比StringBuilder低一些。JDK1.0</li>
+<li>StringBuilder线程不安全。效率比StringBuffer高一些。JDK1.5</li>
+</ul>
+</li>
+<li><h5 id="StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）"><a href="#StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）" class="headerlink" title="StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）"></a>StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;1.添加</span><br><span class="line">append(data)--&gt;StringBuffer，末尾追加。生活中的排队，都是默认排在队伍末尾</span><br><span class="line">insert(offset,data)--&gt;StringBuffer，插入数据。生活中的插队，在哪插入。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;2.删除</span><br><span class="line">delete(start,end)--&gt;StringBuffer，删除，从start下标开始，删除到end下标之前。包含start，但是不包含end。</span><br><span class="line">deleteCharAt(index)--&gt;StringBuffer,删除指定下标对应的字符。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;3.更改</span><br><span class="line">reverse()--&gt;StringBuffer，翻转一个字符串。</span><br><span class="line">setCharAt(index, char)--&gt;void，设置指定下标对应的字符。字符替换。</span><br><span class="line">setLength(newLength)--&gt;void，设置StringBuffer的字符串的长度。截取&#x2F;用空字符填充</span><br><span class="line">replace(start,end, str)--&gt;StringBuffer,替换指定区间的内容：[start,end)</span><br><span class="line">toString()--&gt;从StringBuffer类型，变为String类型。</span><br><span class="line">                                                  </span><br><span class="line">&#x2F;&#x2F;4.同String类相同</span><br><span class="line">length()--&gt;int，获取长度</span><br><span class="line">charAt(index)--&gt;char，获取给定index的字符</span><br><span class="line">indexOf(String)</span><br><span class="line">indexOf(String,fromIndex)</span><br><span class="line">lastIndexOf(String)</span><br><span class="line">lastIndexOf(String,fromIndex)</span><br><span class="line">substring(begin)</span><br><span class="line">substring(begin,end)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="（2）搜索类"><a href="#（2）搜索类" class="headerlink" title="（2）搜索类"></a>（2）搜索类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">indexof（） --&gt;  搜索从头开始</span><br><span class="line">lastIndexof（）--&gt;  从尾部开始</span><br><span class="line"></span><br><span class="line">indexOf(int)--&gt;int</span><br><span class="line">indexOf(String)--&gt;int</span><br><span class="line">indexOf(int ,fromIndex)--&gt;int</span><br><span class="line">indexOf(String,fromIndex)--&gt;int</span><br><span class="line"></span><br><span class="line">lastIndexOf(int)</span><br><span class="line">lastIndexOf(String)</span><br><span class="line">lastIndexOf(int,fromIndex)</span><br><span class="line">lastIndexOf(String,fromIndex)</span><br></pre></td></tr></table></figure>
+
+<h5 id="（3）判断类"><a href="#（3）判断类" class="headerlink" title="（3）判断类"></a>（3）判断类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">contains()--&gt;boolean，是否包含指定内容</span><br><span class="line">equals()--&gt;boolean，判断字符串的字面值，是否相等，重写Object类</span><br><span class="line">equalsIgnoreCase()--&gt;boolean，忽略大小写的比较</span><br><span class="line">startsWith()--&gt;boolean,是否以指定内容开头</span><br><span class="line">endsWith()--&gt;boolean，是否以指定内容结尾</span><br></pre></td></tr></table></figure>
+
+<h5 id="（4）获取新的字符串"><a href="#（4）获取新的字符串" class="headerlink" title="（4）获取新的字符串"></a>（4）获取新的字符串</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">concat()--&gt;String，拼接，作用同</span><br><span class="line">subString(fromIndex)---&gt;String，截取子串</span><br><span class="line">subString(fromIndex,endIndex)--&gt;String，包含fromIndex，不包含endIndex</span><br><span class="line">replace(oldchar,newchar)--&gt;String，替换</span><br><span class="line">replace(CharSequence,CharSequence)--&gt;String</span><br><span class="line">trim()-&gt;String，忽略首尾空格</span><br><span class="line">toLowerCase()--&gt;String，转小写</span><br><span class="line">toUpperCase()--&gt;String，转大写</span><br></pre></td></tr></table></figure>
+
+<h5 id="（5）其他"><a href="#（5）其他" class="headerlink" title="（5）其他"></a>（5）其他</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">length()--&gt;int，获取长度</span><br><span class="line">getBytes()--&gt;byte[],获取字节数组</span><br><span class="line">toCharArray()--&gt;char[]，获取字符数组</span><br><span class="line">charAt(index)--&gt;char，根据下标获取指定的字符</span><br><span class="line">split(切割符)--&gt;String[]，切割</span><br><span class="line">    * 注意点：分隔符，在开头，在中间，都起作用的。在末尾不起作用。</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-3-Math类"><a href="#7-3-Math类" class="headerlink" title="7.3 Math类"></a>7.3 Math类</h4><h5 id="（1）获取绝对值：public-static-double-abs-double-num-获取绝对值。"><a href="#（1）获取绝对值：public-static-double-abs-double-num-获取绝对值。" class="headerlink" title="（1）获取绝对值：public static double abs(double num);     //获取绝对值。"></a>（1）获取绝对值：public static double abs(double num);     //获取绝对值。</h5><p>Math.abs(3.14);        //3.14</p>
+<h5 id="（2）向上取整：public-static-double-ceil-double-num-向上取整。"><a href="#（2）向上取整：public-static-double-ceil-double-num-向上取整。" class="headerlink" title="（2）向上取整：public static double ceil(double num);    //向上取整。"></a>（2）向上取整：public static double ceil(double num);    //向上取整。</h5><p>Math.ceil(3.1);        //4.0</p>
+<p>Math.ceil(3.7);        //4.0</p>
+<p>Math.ceil(3.0);        //3.0</p>
+<h5 id="（3）向下取整：public-static-double-floor-double-num-向下取整。"><a href="#（3）向下取整：public-static-double-floor-double-num-向下取整。" class="headerlink" title="（3）向下取整：public static double floor(double num);    //向下取整。"></a>（3）向下取整：public static double floor(double num);    //向下取整。</h5><p>Math.floor(3.1);        //3.0</p>
+<p>Math.floor(3.7);        //3.0</p>
+<p>Math.floor(3.0);        //3.0</p>
+<h5 id="（4）四舍五入：public-static-long-round-double-num-四舍五入。"><a href="#（4）四舍五入：public-static-long-round-double-num-四舍五入。" class="headerlink" title="（4）四舍五入：public static long round(double num);    //四舍五入。"></a>（4）四舍五入：public static long round(double num);    //四舍五入。</h5><p>Math.floor(20.4);        //20</p>
+<p>Math.floor(10.5);        //11</p>
+<h5 id="（5）圆周率：Math-PI"><a href="#（5）圆周率：Math-PI" class="headerlink" title="（5）圆周率：Math.PI;"></a>（5）圆周率：Math.PI;</h5><h5 id="（6）次方：Math-pow-a-2-a的平方；Math-pow-a-3-a的3次方"><a href="#（6）次方：Math-pow-a-2-a的平方；Math-pow-a-3-a的3次方" class="headerlink" title="（6）次方：Math.pow(a,2)      //a的平方；Math.pow(a,3)      //a的3次方"></a>（6）次方：Math.pow(a,2)      //a的平方；Math.pow(a,3)      //a的3次方</h5><h4 id="7-4-bigdecimal-精确值-类"><a href="#7-4-bigdecimal-精确值-类" class="headerlink" title="7.4 bigdecimal(精确值)类"></a>7.4 bigdecimal(精确值)类</h4><p>double，float很多时候会造成数据有偏差</p>
+<p>BigDecimal类：大小数。精准的计算。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 创建对象</span><br><span class="line">BigDecimal bd3 &#x3D; new BigDecimal(&quot;0.05&quot;);</span><br><span class="line">BigDecimal bd4 &#x3D; new BigDecimal(&quot;0.01&quot;);</span><br><span class="line">&#x2F;&#x2F; 加法</span><br><span class="line">BigDecimal res1 &#x3D; bd3.add(bd4);&#x2F;&#x2F;d1+d2---&gt;d1.add(d2)</span><br><span class="line">System.out.println(res1);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 减法</span><br><span class="line">BigDecimal res2 &#x3D; bd3.subtract(bd4);</span><br><span class="line">System.out.println(res2);</span><br><span class="line">&#x2F;&#x2F; 乘法</span><br><span class="line">BigDecimal res3 &#x3D; bd3.multiply(bd4);</span><br><span class="line">System.out.println(res3);</span><br><span class="line">&#x2F;&#x2F; 除法</span><br><span class="line">BigDecimal bd5 &#x3D; new BigDecimal(&quot;10&quot;);</span><br><span class="line">BigDecimal bd6 &#x3D; new BigDecimal(&quot;3&quot;);</span><br><span class="line">BigDecimal res5 &#x3D; bd5.divide(bd6, 2, BigDecimal.ROUND_HALF_UP);</span><br><span class="line">&#x2F;&#x2F; 2:保留几位小数  BigDecimal.ROUND_HALF_UP：四舍五入</span><br><span class="line">System.out.println(res5);</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-5-Random类（随机数）"><a href="#7-5-Random类（随机数）" class="headerlink" title="7.5 Random类（随机数）"></a>7.5 Random类（随机数）</h4><p>util包下的工具类</p>
+<p>Random类：随机数的类</p>
+<blockquote>
+<p>nextBoolean()，随机布尔类型 true / false</p>
+<p>nextDouble()，随机数[0,1)</p>
+<p>nextInt()，随机数 （int类型的取值范围）</p>
+<p>nextInt(int bound); 随机数，[0,bound)</p>
+</blockquote>
+<h4 id="7-6-日期类"><a href="#7-6-日期类" class="headerlink" title="7.6 日期类"></a>7.6 日期类</h4><h5 id="（1）Date类"><a href="#（1）Date类" class="headerlink" title="（1）Date类"></a>（1）Date类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">月份：</span><br><span class="line">January，一月，0</span><br><span class="line">February，二月，1</span><br><span class="line">March，三月,2</span><br><span class="line">April，四月,3</span><br><span class="line">May，五月,4</span><br><span class="line">June，六月,5</span><br><span class="line">July，七月,6</span><br><span class="line">August，八月,7</span><br><span class="line">September，九月,8</span><br><span class="line">October，十月,9</span><br><span class="line">November，十一月,10</span><br><span class="line">December，十二月,11</span><br><span class="line"></span><br><span class="line">星期：</span><br><span class="line">Monday，星期一</span><br><span class="line">Tuesday，星期二</span><br><span class="line">Wednesday，星期三</span><br><span class="line">Thursday，星期四</span><br><span class="line">Friday，星期五 </span><br><span class="line">Saturday，星期六 </span><br><span class="line">Sunday，星期日</span><br></pre></td></tr></table></figure>
+
+<h5 id="（2）SimpleDateFormat类"><a href="#（2）SimpleDateFormat类" class="headerlink" title="（2）SimpleDateFormat类"></a>（2）SimpleDateFormat类</h5><p>​    专门用于日期和文本之间的转换。</p>
+<p>​    表示日期时间的特殊字符：</p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589015977498.png" alt="58901597749" class="lazyload"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1年：12月，365天</span><br><span class="line">1天：24小时</span><br><span class="line">1小时：60分钟</span><br><span class="line">1分钟：60秒</span><br><span class="line">1秒：1000毫秒</span><br><span class="line">。。。。纳秒，皮秒，微妙。。。</span><br></pre></td></tr></table></figure>
+
+<h5 id="（3）Calendar类"><a href="#（3）Calendar类" class="headerlink" title="（3）Calendar类"></a>（3）Calendar类</h5><p>​    Calendar类是抽象的。GregorianCalendar子类。</p>
+<p>​    获取日期时间，也可以设置日期时间。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//step1：创建Calendar类的对象。</span></span><br><span class="line">Calendar calendar = <span class="keyword">new</span> GregorianCalendar();<span class="comment">//方式一</span></span><br><span class="line">Calendar rightNow = Calendar.getInstance();<span class="comment">//方式二</span></span><br><span class="line"><span class="comment">//step2：</span></span><br><span class="line"><span class="comment">//获取类</span></span><br><span class="line">calender.get(YEAR);</span><br><span class="line">calender.get(MONTH);</span><br><span class="line">calender.get(DAY_OF_MONTH);</span><br><span class="line">calender.get(DAY_OF_WEEK);</span><br><span class="line">calender.get(HOUE);</span><br><span class="line">calender.get(MINUTE);</span><br><span class="line">calender.get(...);</span><br><span class="line">例子：</span><br><span class="line">System.out.println(<span class="string">"YEAR: "</span> + calendar.get(Calendar.YEAR));</span><br><span class="line">System.out.println(<span class="string">"MONTH: "</span> + (calendar.get(Calendar.MONTH)+<span class="number">1</span>));</span><br><span class="line">System.out.println(<span class="string">"DAY_OF_MONTH: "</span> + calendar.get(Calendar.DAY_OF_MONTH));</span><br><span class="line">System.out.println(<span class="string">"DAY_OF_WEEK: "</span> + calendar.get(Calendar.DAY_OF_WEEK));</span><br><span class="line">System.out.println(<span class="string">"AM_PM: "</span> + calendar.get(Calendar.AM_PM));<span class="comment">//0上午am，1下午pm</span></span><br><span class="line">System.out.println(<span class="string">"HOUR: "</span> + calendar.get(Calendar.HOUR));<span class="comment">//12小时制。</span></span><br><span class="line">System.out.println(<span class="string">"HOUR_OF_DAY: "</span> + calendar.get(Calendar.HOUR_OF_DAY));<span class="comment">//24小时制</span></span><br><span class="line">System.out.println(<span class="string">"MINUTE: "</span> + calendar.get(Calendar.MINUTE));</span><br><span class="line">System.out.println(<span class="string">"SECOND: "</span> + calendar.get(Calendar.SECOND));</span><br><span class="line">System.out.println(<span class="string">"MILLISECOND: "</span> + calendar.get(Calendar.MILLISECOND));</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置</span></span><br><span class="line">calendar.set();</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-7-未完待续"><a href="#7-7-未完待续" class="headerlink" title="7.7 未完待续"></a>7.7 未完待续</h4><p>……</p>
+<h3 id="8、集合"><a href="#8、集合" class="headerlink" title="8、集合"></a>8、集合</h3><p>（Collection接口、List接口、Set接口、Map接口）</p>
+<p>详细见  JavaSE—-集合篇</p>
+<h3 id="9、多线程"><a href="#9、多线程" class="headerlink" title="9、多线程"></a>9、多线程</h3><p>详细见 多线程篇</p>
+<h3 id="10、I-O流"><a href="#10、I-O流" class="headerlink" title="10、I/O流"></a>10、I/O流</h3><p>详细见 I/O流篇</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>黑马Java基础+就业班+各种项目idea版本:</p>
+<p><a href="https://www.bilibili.com/video/BV1A4411K7Gx?p=170" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1A4411K7Gx?p=170</a></p>
+<p>千峰java逆战班</p>
+<p><a href="https://www.bilibili.com/video/BV1u7411Z7iS?p=111" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1u7411Z7iS?p=111</a></p>
+
+  </article>
+
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/JavaSE/">JavaSE</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/JavaSE/" rel="tag">JavaSE</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer" style="margin:25px 0px 0px 0px;">
+    
+      
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>Mr.wang<br>
+    <strong>本文链接：</strong><a href="http://yoursite.com/2020/05/08/javaSE/" title="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;08&#x2F;javaSE&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;08&#x2F;javaSE&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+    
+    <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'd7kEWE2vV2Nhz97DAi16namp-gzGzoHsz',
+        appKey: '4tikL34MHeDjE3UTiNHXFUGx'
+    })
+</script>
+</section>
+  </div>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!--<script src="/js/app.js?v=1589181118860"></script>-->
+
+
+    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+ 
+<script> 
+!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+</script>
+
+
+
+  
+
+
+
+
+
+</body>
+
+</html>
