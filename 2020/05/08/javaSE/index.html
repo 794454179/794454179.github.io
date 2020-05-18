@@ -15,34 +15,34 @@
   <meta name="description" content="Java：构造方法、this修饰符、访问权限修饰符、多态、抽象、static关键字、常用类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaSE">
-<meta property="og:url" content="http://yoursite.com/2020/05/08/JavaSE/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/05/08/javaSE/index.html">
 <meta property="og:site_name" content="My-Blog">
 <meta property="og:description" content="Java：构造方法、this修饰符、访问权限修饰符、多态、抽象、static关键字、常用类">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1588945722929.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1588946227329.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1588946271012.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589001234740.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589002802380.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589003667297.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589006028894.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589005127357.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589006371928.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589006965563.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589007652978.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589010219324.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589011208182.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589013389492.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/08/JavaSE/1589015977498.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1588945722929.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1588946227329.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1588946271012.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589001234740.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589002802380.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589003667297.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589006028894.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589005127357.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589006371928.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589006965563.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589007652978.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589010219324.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589011208182.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589013389492.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589015977498.png">
 <meta property="article:published_time" content="2020-05-08T12:46:25.000Z">
 <meta property="article:modified_time" content="2020-05-11T07:15:35.027Z">
 <meta property="article:author" content="Mr.wang">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/08/JavaSE/1588945722929.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/08/javaSE/1588945722929.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1589768239589">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1589769467940">-->
 
    
     <style>
@@ -246,42 +246,42 @@
 <h3 id="2、this修饰符"><a href="#2、this修饰符" class="headerlink" title="2、this修饰符"></a>2、this修饰符</h3><h4 id="2-1-this用法一"><a href="#2-1-this用法一" class="headerlink" title="2.1  this用法一"></a>2.1  this用法一</h4><p>（1）词义：表示当前对象。（谁调用谁就是当前的对象 ）</p>
 <p>（2）一个类中，成员变量和局部变量名字可以一样。但遵循就近原则。二者都有并使用时离哪个声明近就是哪个变量。</p>
 <p>（3）使用this，就是告诉编译器，this后面的变量是成员变量。</p>
-<p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1588945722929.png" alt="58894572292" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1588945722929.png" alt="58894572292" class="lazyload"></p>
 <h4 id="2-2-this用法二"><a href="#2-2-this用法二" class="headerlink" title="2.2  this用法二"></a>2.2  this用法二</h4><p>（1）this()指代当前类的构造方法。</p>
-<p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1588946227329.png" alt="58894633651" class="lazyload"></p>
-<p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1588946271012.png" alt="58894627101" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1588946227329.png" alt="58894633651" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1588946271012.png" alt="58894627101" class="lazyload"></p>
 <h3 id="3、访问权限修饰符（public、private……）"><a href="#3、访问权限修饰符（public、private……）" class="headerlink" title="3、访问权限修饰符（public、private……）"></a>3、访问权限修饰符（public、private……）</h3><p>​    private：私有的。本类中。</p>
 <p>​    默认的（default）：啥修饰符都不写，就是默认。本类，同包下可以访问。</p>
 <p>​    protected：受保护的。本类，同包下，不同包只有其子类可用。</p>
 <p>​    public：没有限制。</p>
-<p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589001234740.png" alt="58900123474" class="lazyload"></p>
-<h3 id="4、多态、向上转型、向下转型、instanceof"><a href="#4、多态、向上转型、向下转型、instanceof" class="headerlink" title="4、多态、向上转型、向下转型、instanceof"></a>4、多态、向上转型、向下转型、instanceof</h3><p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589002802380.png" alt="58900490782" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589001234740.png" alt="58900123474" class="lazyload"></p>
+<h3 id="4、多态、向上转型、向下转型、instanceof"><a href="#4、多态、向上转型、向下转型、instanceof" class="headerlink" title="4、多态、向上转型、向下转型、instanceof"></a>4、多态、向上转型、向下转型、instanceof</h3><p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589002802380.png" alt="58900490782" class="lazyload"></p>
 <h4 id="4-1-对象的向上转型-其实就是【多态】-写法"><a href="#4-1-对象的向上转型-其实就是【多态】-写法" class="headerlink" title="4.1 对象的向上转型(其实就是【多态】 写法)"></a>4.1 对象的向上转型(其实就是【多态】 写法)</h4><h5 id="4-1-1-格式"><a href="#4-1-1-格式" class="headerlink" title="4.1.1 格式"></a>4.1.1 格式</h5><p>​    父类名称 对象名 = new 子类名称();    </p>
 <h5 id="4-1-2-含义"><a href="#4-1-2-含义" class="headerlink" title="4.1.2 含义"></a>4.1.2 含义</h5><p>​    右侧创建一个子类对象，把它当做父类来看待使用。</p>
 <h5 id="4-1-3-注意事项"><a href="#4-1-3-注意事项" class="headerlink" title="4.1.3 注意事项"></a>4.1.3 注意事项</h5><p>​    向上转型一定是安全的。从小范围转向了大范围。</p>
 <h5 id="4-1-4-举例"><a href="#4-1-4-举例" class="headerlink" title="4.1.4 举例"></a>4.1.4 举例</h5><p>​    Animal animal =new Cat();</p>
 <p>​    创建了一只猫，当作动物看待。</p>
 <p>​    从小范围的猫，向上转型成为更大范围的动物。</p>
-<p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589003667297.png" alt="58900366729" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589003667297.png" alt="58900366729" class="lazyload"></p>
 <h4 id="4-2-对象的向下转型（其实就是【还原】的动作）"><a href="#4-2-对象的向下转型（其实就是【还原】的动作）" class="headerlink" title="4.2 对象的向下转型（其实就是【还原】的动作）"></a>4.2 对象的向下转型（其实就是【还原】的动作）</h4><h5 id="4-2-1-格式"><a href="#4-2-1-格式" class="headerlink" title="4.2.1 格式"></a>4.2.1 格式</h5><p>​    子类名称 对象名 =（子类名称） 对象父类；</p>
 <h5 id="4-2-2-含义"><a href="#4-2-2-含义" class="headerlink" title="4.2.2 含义"></a>4.2.2 含义</h5><p>​    将父类对象，【还原】成为本来的子类对象。</p>
 <h5 id="4-2-3-注意事项"><a href="#4-2-3-注意事项" class="headerlink" title="4.2.3 注意事项"></a>4.2.3 注意事项</h5><p>​    （1）必须保证对象本来创建的时候，就是猫，才能向下转型成为猫。</p>
 <p>​    （2）如果对象创建的时候本来不是猫，现在非要向下转型成为猫，就会报错。</p>
 <h5 id="4-2-4-举例"><a href="#4-2-4-举例" class="headerlink" title="4.2.4 举例"></a>4.2.4 举例</h5><p>​    Animal animal =new Cat();    //本来是猫，向上转型为动物。</p>
 <p>​    Cat cat = (Cat)animal;        //本来是猫，已经被当作动物了，还原回来成为本来的猫</p>
-<h4 id="4-3-instanceof关键字"><a href="#4-3-instanceof关键字" class="headerlink" title="4.3 instanceof关键字"></a>4.3 instanceof关键字</h4><h5 id="4-3-1-定义"><a href="#4-3-1-定义" class="headerlink" title="4.3.1 定义"></a>4.3.1 定义</h5><p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589006028894.png" alt="58900602889" class="lazyload"></p>
+<h4 id="4-3-instanceof关键字"><a href="#4-3-instanceof关键字" class="headerlink" title="4.3 instanceof关键字"></a>4.3 instanceof关键字</h4><h5 id="4-3-1-定义"><a href="#4-3-1-定义" class="headerlink" title="4.3.1 定义"></a>4.3.1 定义</h5><p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589006028894.png" alt="58900602889" class="lazyload"></p>
 <h5 id="4-3-2-使用"><a href="#4-3-2-使用" class="headerlink" title="4.3.2 使用"></a>4.3.2 使用</h5><p>（作用：判断a5类型是不是cat  返回值是true或false）</p>
-<p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589005127357.png" alt="58900512735" class="lazyload"></p>
-<h4 id="4-4-对象的多态性的应用"><a href="#4-4-对象的多态性的应用" class="headerlink" title="4.4 对象的多态性的应用"></a>4.4 对象的多态性的应用</h4><p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589006371928.png" alt="58900637192" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589005127357.png" alt="58900512735" class="lazyload"></p>
+<h4 id="4-4-对象的多态性的应用"><a href="#4-4-对象的多态性的应用" class="headerlink" title="4.4 对象的多态性的应用"></a>4.4 对象的多态性的应用</h4><p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589006371928.png" alt="58900637192" class="lazyload"></p>
 <h4 id="4-5-聊聊多态性"><a href="#4-5-聊聊多态性" class="headerlink" title="4.5 聊聊多态性"></a>4.5 聊聊多态性</h4><p>多态性：事物的多种形态</p>
 <p>​    方法：方法的多种形态，指的就是方法的重载。一个功能方法，但是根据参数的不同，执行的具体方法也不同。（也叫做静态多态。程序编译时发生的多态）</p>
 <p>​    对象：对象的多态性，结合方法的重写。一个子类对象，如果看成父类的类型，那么执行的方法就只能父类的以及子类重写的（向上转型）；如果再把该对象向下转型为子类类型，才可以执行子类的新增方法（向下转型）。（整个也叫做动态多态。）</p>
-<p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589006965563.png" alt="58900696556" class="lazyload"></p>
-<h3 id="5、抽象（abstract关键字）"><a href="#5、抽象（abstract关键字）" class="headerlink" title="5、抽象（abstract关键字）"></a>5、抽象（abstract关键字）</h3><p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589007652978.png" alt="58900765297" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589006965563.png" alt="58900696556" class="lazyload"></p>
+<h3 id="5、抽象（abstract关键字）"><a href="#5、抽象（abstract关键字）" class="headerlink" title="5、抽象（abstract关键字）"></a>5、抽象（abstract关键字）</h3><p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589007652978.png" alt="58900765297" class="lazyload"></p>
 <h3 id="6、static关键字"><a href="#6、static关键字" class="headerlink" title="6、static关键字"></a>6、static关键字</h3><h4 id="6-1-修饰属性"><a href="#6-1-修饰属性" class="headerlink" title="6.1 修饰属性"></a>6.1 修饰属性</h4><p>​    存放在专门数据区（不放在栈，也不再堆），随着类的加载而创建。</p>
-<p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589010219324.png" alt="58901021932" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589010219324.png" alt="58901021932" class="lazyload"></p>
 <h4 id="6-2-修饰方法"><a href="#6-2-修饰方法" class="headerlink" title="6.2 修饰方法"></a>6.2 修饰方法</h4><p>​    一个方法，一旦使用static修饰，就表示该方法属于类，应该由类来直接调用。</p>
-<h4 id="6-3-总结"><a href="#6-3-总结" class="headerlink" title="6.3 总结"></a>6.3 总结</h4><p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589011208182.png" alt="58901120818" class="lazyload"></p>
+<h4 id="6-3-总结"><a href="#6-3-总结" class="headerlink" title="6.3 总结"></a>6.3 总结</h4><p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589011208182.png" alt="58901120818" class="lazyload"></p>
 <h3 id="7、常用类"><a href="#7、常用类" class="headerlink" title="7、常用类"></a>7、常用类</h3><p>（Object类、String类、Math类、bigdecimal(精确值)类、随机数类、日期类）</p>
 <h4 id="7-1-Object类"><a href="#7-1-Object类" class="headerlink" title="7.1 Object类"></a>7.1 Object类</h4><p>所有类的根基，Java中的所有的类，都会直接或间接的继承Object类。</p>
 <p>只要是java中的类对象，默认都可以调用Object类中的方法。</p>
@@ -289,7 +289,7 @@
 <li>如果一个方法的参数为Object类型，实际可以传入任意的类对象。</li>
 <li>如果一个方法的返回值是Object类型，实际上可以返回任意的类对象。</li>
 </ul>
-<p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589013389492.png" alt="58901338949" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589013389492.png" alt="58901338949" class="lazyload"></p>
 <h5 id="（1）getClass-–-gt-Class，未完待续—-gt-反射"><a href="#（1）getClass-–-gt-Class，未完待续—-gt-反射" class="headerlink" title="（1）getClass()–&gt;Class，未完待续—&gt;反射"></a>（1）getClass()–&gt;Class，未完待续—&gt;反射</h5><p>​    返回一个对象运行时的类类型。</p>
 <p>​     对象.getClass()—&gt;返回该对象所属的类的字节码文件对象。</p>
 <p>​     理解为：返回的是堆中的实际的对象的类型</p>
@@ -350,7 +350,7 @@
 
 <h5 id="（2）SimpleDateFormat类"><a href="#（2）SimpleDateFormat类" class="headerlink" title="（2）SimpleDateFormat类"></a>（2）SimpleDateFormat类</h5><p>​    专门用于日期和文本之间的转换。</p>
 <p>​    表示日期时间的特殊字符：</p>
-<p><img data-sizes="auto" data-src="/2020/05/08/JavaSE/1589015977498.png" alt="58901597749" class="lazyload"></p>
+<p><img data-sizes="auto" data-src="/2020/05/08/javaSE/1589015977498.png" alt="58901597749" class="lazyload"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1年：12月，365天</span><br><span class="line">1天：24小时</span><br><span class="line">1小时：60分钟</span><br><span class="line">1分钟：60秒</span><br><span class="line">1秒：1000毫秒</span><br><span class="line">。。。。纳秒，皮秒，微妙。。。</span><br></pre></td></tr></table></figure>
 
 <h5 id="（3）Calendar类"><a href="#（3）Calendar类" class="headerlink" title="（3）Calendar类"></a>（3）Calendar类</h5><p>​    Calendar类是抽象的。GregorianCalendar子类。</p>
@@ -383,7 +383,7 @@
       
   <div class="nexmoe-post-copyright">
     <strong>本文作者：</strong>Mr.wang<br>
-    <strong>本文链接：</strong><a href="http://yoursite.com/2020/05/08/JavaSE/" title="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;08&#x2F;JavaSE&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;08&#x2F;JavaSE&#x2F;</a><br>
+    <strong>本文链接：</strong><a href="http://yoursite.com/2020/05/08/javaSE/" title="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;08&#x2F;javaSE&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;08&#x2F;javaSE&#x2F;</a><br>
     
       <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
     
@@ -409,7 +409,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1589768239590"></script>-->
+<!--<script src="/js/app.js?v=1589769467941"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
