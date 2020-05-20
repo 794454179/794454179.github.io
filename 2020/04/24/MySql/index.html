@@ -19,14 +19,23 @@
 <meta property="og:site_name" content="My-Blog">
 <meta property="og:description" content="MySQL——数据类型、存储引擎、数据库操作、数据表操作、常用SQL">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589902411274.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589901793020.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589902030267.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589901939132.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589902000981.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589902198639.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589902248086.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589902296339.png">
 <meta property="article:published_time" content="2020-04-24T09:41:22.000Z">
-<meta property="article:modified_time" content="2020-05-11T03:53:28.989Z">
+<meta property="article:modified_time" content="2020-05-19T16:40:45.119Z">
 <meta property="article:author" content="Mr.wang">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/24/MySql/1589902411274.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1589815777117">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1589965121461">-->
 
    
     <style>
@@ -60,9 +69,9 @@
         </a>
     </div>
     <div class="nexmoe-count" style="border-radius:15px;background:white;padding:15px 10px;margin:20px 20px 20px 20px;box-shadow:0 0 1rem rgba(161,177,204,.4);">
-        <div><span>文章</span>9</div>
-        <div><span>标签</span>9</div>
-        <div><span>分类</span>5</div>
+        <div><span>文章</span>10</div>
+        <div><span>标签</span>10</div>
+        <div><span>分类</span>6</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}" style="background-color:white;border-radius:15px;margin:20px 20px 20px 20px;box-shadow:0 0 1rem rgba(161,177,204,.4);">
         
@@ -152,6 +161,13 @@
         
 
         <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Redis/">Redis</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
           <a class="category-list-link" href="/categories/算法/">算法</a>
           <span class="category-list-count">1</span>
         </li>
@@ -175,7 +191,7 @@
   <div class="nexmoe-widget-wrap" style="margin:20px 20px 20px 20px;">
     <h3 class="nexmoe-widget-title">标签云</h3>
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/CentOS7/" style="font-size: 10px;">CentOS7</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/I-O/" style="font-size: 10px;">I/O</a> <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/Java%E9%9B%86%E5%90%88/" style="font-size: 10px;">Java集合</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/" style="font-size: 10px;">动态规划算法</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 10px;">多线程</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a>
+      <a href="/tags/CentOS7/" style="font-size: 10px;">CentOS7</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/I-O/" style="font-size: 10px;">I/O</a> <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/Java%E9%9B%86%E5%90%88/" style="font-size: 10px;">Java集合</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/" style="font-size: 10px;">动态规划算法</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 10px;">多线程</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a>
     </div>
     
   </div>
@@ -211,8 +227,8 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月24日</a>
-    <a><i class="nexmoefont icon-areachart"></i>3.1k 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 13 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>7k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 32 分钟</a>
 </div>
 
   <div class="nexmoe-post-right">
@@ -456,9 +472,8 @@
 <li>OR：记录满足任意一个查询条件时，才会被查询出来。</li>
 <li>XOR：记录满足其中一个条件，并且不满足另一个条件时，才会被查询出来。</li>
 </ul>
-<h4 id="4-2-使用Like模糊查询"><a href="#4-2-使用Like模糊查询" class="headerlink" title="4.2 使用Like模糊查询"></a>4.2 使用Like模糊查询</h4><h5 id="（1）基础："><a href="#（1）基础：" class="headerlink" title="（1）基础："></a>（1）基础：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[NOT] LIKE  &#39;字符串&#39;</span><br></pre></td></tr></table></figure>
+<h4 id="4-2-使用Like模糊查询"><a href="#4-2-使用Like模糊查询" class="headerlink" title="4.2 使用Like模糊查询"></a>4.2 使用Like模糊查询</h4><h5 id="（1）基础："><a href="#（1）基础：" class="headerlink" title="（1）基础："></a>（1）基础：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[NOT] LIKE  &#39;字符串&#39;​</span><br></pre></td></tr></table></figure>
 
-<p>​    其中：</p>
 <ul>
 <li>NOT ：可选参数，字段中的内容与指定的字符串不匹配时满足条件。</li>
 <li>字符串：指定用来匹配的字符串。“字符串”可以是一个很完整的字符串，也可以包含通配符。</li>
@@ -477,9 +492,246 @@
 <h5 id="使用通配符技巧："><a href="#使用通配符技巧：" class="headerlink" title="使用通配符技巧："></a>使用通配符技巧：</h5><ul>
 <li>不要过度使用通配符，如果其它操作符能达到相同的目的，应该使用其它操作符。因为 MySQL 对通配符的处理一般会比其他操作符花费更长的时间。</li>
 <li>在确定使用通配符后，除非绝对有必要，否则不要把它们用在字符串的开始处。把通配符置于搜索模式的开始处，搜索起来是最慢的。</li>
-<li>仔细注意通配符的位置。如果放错地方，可能不会返回想要的数据。</li>
 </ul>
-<h4 id="4-3-范围查询"><a href="#4-3-范围查询" class="headerlink" title="4.3 范围查询"></a>4.3 范围查询</h4><h4 id="4-4-空值查询"><a href="#4-4-空值查询" class="headerlink" title="4.4 空值查询"></a>4.4 空值查询</h4><h4 id="4-5-分组查询"><a href="#4-5-分组查询" class="headerlink" title="4.5 分组查询"></a>4.5 分组查询</h4><h4 id="4-6-过滤查询"><a href="#4-6-过滤查询" class="headerlink" title="4.6 过滤查询"></a>4.6 过滤查询</h4><h4 id="4-7-子查询"><a href="#4-7-子查询" class="headerlink" title="4.7 子查询"></a>4.7 子查询</h4><h3 id="5、处理数据"><a href="#5、处理数据" class="headerlink" title="5、处理数据"></a>5、处理数据</h3><h4 id="5-1-去重"><a href="#5-1-去重" class="headerlink" title="5.1 去重"></a>5.1 去重</h4><h4 id="5-2-设置别名"><a href="#5-2-设置别名" class="headerlink" title="5.2 设置别名"></a>5.2 设置别名</h4><h4 id="5-3-限制查询结果的条数"><a href="#5-3-限制查询结果的条数" class="headerlink" title="5.3 限制查询结果的条数"></a>5.3 限制查询结果的条数</h4><h4 id="5-4-对查询结果排序"><a href="#5-4-对查询结果排序" class="headerlink" title="5.4 对查询结果排序"></a>5.4 对查询结果排序</h4><h3 id="6、连接"><a href="#6、连接" class="headerlink" title="6、连接"></a>6、连接</h3><h4 id="6-1-交叉连接"><a href="#6-1-交叉连接" class="headerlink" title="6.1 交叉连接"></a>6.1 交叉连接</h4><h4 id="6-2-内连接"><a href="#6-2-内连接" class="headerlink" title="6.2 内连接"></a>6.2 内连接</h4><h4 id="6-3-外连接"><a href="#6-3-外连接" class="headerlink" title="6.3 外连接"></a>6.3 外连接</h4><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://c.biancheng.net/mysql/mysql/10/" target="_blank" rel="noopener">http://c.biancheng.net/mysql/mysql/10/</a></p>
+<h4 id="4-3-范围查询（Between-起始值-and-终止值）"><a href="#4-3-范围查询（Between-起始值-and-终止值）" class="headerlink" title="4.3 范围查询（Between  起始值  and   终止值）"></a>4.3 范围查询（Between  起始值  and   终止值）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 在表 tb_students_info 中查询年龄在 20 到 23 之间的学生姓名和年龄</span><br><span class="line">mysql&gt; SELECT name,age FROM tb_students_info </span><br><span class="line">    -&gt; WHERE age BETWEEN 20 AND 23;</span><br><span class="line">+--------+------+</span><br><span class="line">| name   | age  |</span><br><span class="line">+--------+------+</span><br><span class="line">| Green  |   23 |</span><br><span class="line">| Henry  |   23 |</span><br><span class="line">| Jane   |   22 |</span><br><span class="line">| John   |   21 |</span><br><span class="line">| Lily   |   22 |</span><br><span class="line">| Susan  |   23 |</span><br><span class="line">| Thomas |   22 |</span><br><span class="line">| Tom    |   23 |</span><br><span class="line">+--------+------+</span><br><span class="line">8 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-4-空值查询（is-null-is-not-null）"><a href="#4-4-空值查询（is-null-is-not-null）" class="headerlink" title="4.4 空值查询（is null / is not null）"></a>4.4 空值查询（is null / is not null）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 下面使用 IS NULL 关键字来查询 tb_students_info 表中 login_date 字段是 NULL 的记录。</span><br><span class="line">mysql&gt; SELECT &#96;name&#96;,&#96;login_date&#96; FROM tb_students_info </span><br><span class="line">    -&gt; WHERE login_date IS NULL;</span><br><span class="line">+--------+------------+</span><br><span class="line">| NAME   | login_date |</span><br><span class="line">+--------+------------+</span><br><span class="line">| Dany   | NULL       |</span><br><span class="line">| Green  | NULL       |</span><br><span class="line">| Henry  | NULL       |</span><br><span class="line">| Jane   | NULL       |</span><br><span class="line">| Thomas | NULL       |</span><br><span class="line">| Tom    | NULL       |</span><br><span class="line">+--------+------------+</span><br><span class="line">6 rows in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-分组查询（Group-by）"><a href="#4-5-分组查询（Group-by）" class="headerlink" title="4.5 分组查询（Group by）"></a>4.5 分组查询（Group by）</h4><p>（1）GROUP BY单独使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 根据 tb_students_info 表中的 sex 字段进行分组查询</span><br><span class="line">mysql&gt; SELECT &#96;name&#96;,&#96;sex&#96; FROM tb_students_info </span><br><span class="line">    -&gt; GROUP BY sex;</span><br><span class="line">+-------+------+</span><br><span class="line">| name  | sex  |</span><br><span class="line">+-------+------+</span><br><span class="line">| Henry | 女   |</span><br><span class="line">| Dany  | 男   |</span><br><span class="line">+-------+------+</span><br><span class="line">2 rows in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<p>（2）GROUP BY 与 GROUP_CONCAT() </p>
+<p>GROUP BY 关键字可以和 GROUP_CONCAT() 函数一起使用。GROUP_CONCAT() 函数会把每个分组的字段值都显示出来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 根据 tb_students_info 表中的 sex 字段进行分组查询，使用 GROUP_CONCAT() 函数将每个分组的 name 字段的值都显示出来。</span><br><span class="line">mysql&gt; SELECT &#96;sex&#96;, GROUP_CONCAT(name) FROM tb_students_info </span><br><span class="line">    -&gt; GROUP BY sex;</span><br><span class="line">+------+----------------------------+</span><br><span class="line">| sex  | GROUP_CONCAT(name)         |</span><br><span class="line">+------+----------------------------+</span><br><span class="line">| 女   | Henry,Jim,John,Thomas,Tom  |</span><br><span class="line">| 男   | Dany,Green,Jane,Lily,Susan |</span><br><span class="line">+------+----------------------------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<p>（3）GROUP BY 与聚合函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 根据 tb_students_info 表的 sex 字段进行分组查询，使用 COUNT() 函数计算每一组的记录数。</span><br><span class="line">mysql&gt; SELECT sex,COUNT(sex) FROM tb_students_info </span><br><span class="line">    -&gt; GROUP BY sex;</span><br><span class="line">+------+------------+</span><br><span class="line">| sex  | COUNT(sex) |</span><br><span class="line">+------+------------+</span><br><span class="line">| 女   |          5 |</span><br><span class="line">| 男   |          5 |</span><br><span class="line">+------+------------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<p>（4）GROUP BY 与 WITH ROLLUP</p>
+<p>WITH POLLUP 关键字用来在所有记录的最后加上一条记录，这条记录是上面所有记录的总和，即统计记录数量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 根据 tb_students_info 表中的 sex 字段进行分组查询，并使用 WITH ROLLUP 显示记录的总和。</span><br><span class="line">mysql&gt; SELECT sex,GROUP_CONCAT(name) FROM tb_students_info </span><br><span class="line">    -&gt;GROUP BY sex WITH ROLLUP;</span><br><span class="line">+------+------------------------------------------------------+</span><br><span class="line">| sex  | GROUP_CONCAT(name)                                   |</span><br><span class="line">+------+------------------------------------------------------+</span><br><span class="line">| 女   | Henry,Jim,John,Thomas,Tom                            |</span><br><span class="line">| 男   | Dany,Green,Jane,Lily,Susan                           |</span><br><span class="line">| NULL | Henry,Jim,John,Thomas,Tom,Dany,Green,Jane,Lily,Susan |</span><br><span class="line">+------+------------------------------------------------------+</span><br><span class="line">3 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-6-过滤查询（HAVING）"><a href="#4-6-过滤查询（HAVING）" class="headerlink" title="4.6 过滤查询（HAVING）"></a>4.6 过滤查询（HAVING）</h4><p>（1）格式：HAVING &lt;查询条件&gt;</p>
+<p>（2）HAVING 关键字和 WHERE 关键字都可以用来过滤数据，且 HAVING 支持 WHERE 关键字中所有的操作符和语法。</p>
+<p>但是 WHERE 和 HAVING 关键字也存在以下几点差异：</p>
+<ul>
+<li>一般情况下，WHERE 用于过滤数据行，而 HAVING 用于过滤分组。</li>
+<li>WHERE 查询条件中不可以使用聚合函数，而 HAVING 查询条件中可以使用聚合函数。</li>
+<li>WHERE 在数据分组前进行过滤，而 HAVING 在数据分组后进行过滤 。</li>
+<li>WHERE 针对数据库文件进行过滤，而 HAVING 针对查询结果进行过滤。也就是说，WHERE 根据数据表中的字段直接进行过滤，而 HAVING 是根据前面已经查询出的字段进行过滤。</li>
+<li>WHERE 查询条件中不可以使用字段别名，而 HAVING 查询条件中可以使用字段别名。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-7-子查询（IN-NOT-IN）"><a href="#4-7-子查询（IN-NOT-IN）" class="headerlink" title="4.7 子查询（IN | NOT IN）"></a>4.7 子查询（IN | NOT IN）</h4><p>（1）IN | NOT IN</p>
+<p>当表达式与子查询返回的结果集中的某个值相等时，返回 TRUE，否则返回 FALSE；若使用关键字 NOT，则返回值正好相反。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 使用子查询在 tb_students_info 表和 tb_course 表中查询学习 Java 课程的学生姓名</span><br><span class="line">mysql&gt; SELECT name FROM tb_students_info </span><br><span class="line">    -&gt; WHERE course_id IN (SELECT id FROM tb_course WHERE course_name &#x3D; &#39;Java&#39;);</span><br><span class="line">+-------+</span><br><span class="line">| name  |</span><br><span class="line">+-------+</span><br><span class="line">| Dany  |</span><br><span class="line">| Henry |</span><br><span class="line">+-------+</span><br><span class="line">2 rows in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<p>（2）EXISTS | NOT EXISTS</p>
+<p>用于判断子查询的结果集是否为空，若子查询的结果集不为空，返回 TRUE，否则返回 FALSE；若使用关键字 NOT，则返回的值正好相反。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 查询 tb_course 表中是否存在 id&#x3D;1 的课程，如果存在，就查询出 tb_students_info 表中 age 字段大于 24 的记录</span><br><span class="line">mysql&gt; SELECT * FROM tb_students_info</span><br><span class="line">    -&gt; WHERE age&gt;24 AND EXISTS(SELECT course_name FROM tb_course WHERE id&#x3D;1);</span><br><span class="line">+----+------+------+------+--------+-----------+</span><br><span class="line">| id | name | age  | sex  | height | course_id |</span><br><span class="line">+----+------+------+------+--------+-----------+</span><br><span class="line">|  1 | Dany |   25 | 男   |    160 |         1 |</span><br><span class="line">+----+------+------+------+--------+-----------+</span><br><span class="line">1 row in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、处理数据"><a href="#5、处理数据" class="headerlink" title="5、处理数据"></a>5、处理数据</h3><h4 id="5-1-去重（DISTINCT）"><a href="#5-1-去重（DISTINCT）" class="headerlink" title="5.1 去重（DISTINCT）"></a>5.1 去重（DISTINCT）</h4><p>（1）SELECT DISTINCT &lt;字段名&gt; FROM &lt;表名&gt;;</p>
+<p>（2）使用 DISTINCT 关键字时需要注意以下几点：</p>
+<ul>
+<li>DISTINCT 关键字只能在 SELECT 语句中使用。</li>
+<li>在对一个或多个字段去重时，DISTINCT 关键字必须在所有字段的最前面。</li>
+<li>如果 DISTINCT 关键字后有多个字段，则会对多个字段进行组合去重，也就是说，只有多个字段组合起来完全是一样的情况下才会被去重。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT name FROM student;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2-设置别名（AS）"><a href="#5-2-设置别名（AS）" class="headerlink" title="5.2 设置别名（AS）"></a>5.2 设置别名（AS）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="5-3-限制查询结果的条数（LIMIT）"><a href="#5-3-限制查询结果的条数（LIMIT）" class="headerlink" title="5.3 限制查询结果的条数（LIMIT）"></a>5.3 限制查询结果的条数（LIMIT）</h4><p>（1）指定初始位置</p>
+<ul>
+<li>格式：LIMIT 初始位置，记录数。</li>
+</ul>
+<ul>
+<li>“初始位置”表示从哪条记录开始显示；“记录数”表示显示记录的条数。第一条记录的位置是 0，第二条记录的位置是 1。后面的记录依次类推。</li>
+<li>注意：LIMIT 后的两个参数必须都是正整数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 在 tb_students_info 表中，使用 LIMIT 子句返回从第 4 条记录开始的行数为 5 的记录</span><br><span class="line">mysql&gt; SELECT * FROM tb_students_info LIMIT 3,5;</span><br><span class="line">+----+-------+---------+------+------+--------+------------+</span><br><span class="line">| id | name  | dept_id | age  | sex  | height | login_date |</span><br><span class="line">+----+-------+---------+------+------+--------+------------+</span><br><span class="line">|  4 | Jane  |       1 |   22 | F    |    162 | 2016-12-20 |</span><br><span class="line">|  5 | Jim   |       1 |   24 | M    |    175 | 2016-01-15 |</span><br><span class="line">|  6 | John  |       2 |   21 | M    |    172 | 2015-11-11 |</span><br><span class="line">|  7 | Lily  |       6 |   22 | F    |    165 | 2016-02-26 |</span><br><span class="line">|  8 | Susan |       4 |   23 | F    |    170 | 2015-10-01 |</span><br><span class="line">+----+-------+---------+------+------+--------+------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<p>（2）不指定初始位置</p>
+<ul>
+<li>格式：LIMIT 记录数</li>
+<li>其中，“记录数”表示显示记录的条数。如果“记录数”的值小于查询结果的总数，则会从第一条记录开始，显示指定条数的记录。如果“记录数”的值大于查询结果的总数，则会直接显示查询出来的所有记录。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 显示 tb_students_info 表查询结果的前 4 行：</span><br><span class="line">mysql&gt; SELECT * FROM tb_students_info LIMIT 4;</span><br><span class="line">+----+-------+---------+------+------+--------+------------+</span><br><span class="line">| id | name  | dept_id | age  | sex  | height | login_date |</span><br><span class="line">+----+-------+---------+------+------+--------+------------+</span><br><span class="line">|  1 | Dany  |       1 |   25 | F    |    160 | 2015-09-10 |</span><br><span class="line">|  2 | Green |       3 |   23 | F    |    158 | 2016-10-22 |</span><br><span class="line">|  3 | Henry |       2 |   23 | M    |    185 | 2015-05-31 |</span><br><span class="line">|  4 | Jane  |       1 |   22 | F    |    162 | 2016-12-20 |</span><br><span class="line">+----+-------+---------+------+------+--------+------------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<p>（3）LIMIT和OFFSET组合使用</p>
+<ul>
+<li>格式：LIMIT 记录数 OFFSET 初始位置</li>
+<li>参数和 LIMIT 语法中参数含义相同，“初始位置”指定从哪条记录开始显示；“记录数”表示显示记录的条数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 在 tb_students_info 表中，使用 LIMIT OFFSET 返回从第 4 条记录开始的行数为 5 的记录。</span><br><span class="line">mysql&gt; SELECT * FROM tb_students_info LIMIT 5 OFFSET 3;</span><br><span class="line">+----+-------+---------+------+------+--------+------------+</span><br><span class="line">| id | name  | dept_id | age  | sex  | height | login_date |</span><br><span class="line">+----+-------+---------+------+------+--------+------------+</span><br><span class="line">|  4 | Jane  |       1 |   22 | F    |    162 | 2016-12-20 |</span><br><span class="line">|  5 | Jim   |       1 |   24 | M    |    175 | 2016-01-15 |</span><br><span class="line">|  6 | John  |       2 |   21 | M    |    172 | 2015-11-11 |</span><br><span class="line">|  7 | Lily  |       6 |   22 | F    |    165 | 2016-02-26 |</span><br><span class="line">|  8 | Susan |       4 |   23 | F    |    170 | 2015-10-01 |</span><br><span class="line">+----+-------+---------+------+------+--------+------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-4-对查询结果排序（ORDER-BY-lt-字段名-gt-ASC-DESC-）"><a href="#5-4-对查询结果排序（ORDER-BY-lt-字段名-gt-ASC-DESC-）" class="headerlink" title="5.4 对查询结果排序（ORDER BY &lt;字段名&gt; [ASC|DESC]）"></a>5.4 对查询结果排序（ORDER BY &lt;字段名&gt; [ASC|DESC]）</h4><p>（1）格式：ORDER BY &lt;字段名&gt; [ASC|DESC]</p>
+<p>语法说明如下：</p>
+<ul>
+<li>字段名：表示需要排序的字段名称，多个字段时用逗号隔开。</li>
+<li>ASC|DESC：<code>ASC</code>表示字段按升序排序；<code>DESC</code>表示字段按降序排序。其中<code>ASC</code>为默认值。</li>
+</ul>
+<p>（2）使用 ORDER BY 关键字应该注意以下几个方面：</p>
+<ul>
+<li>ORDER BY 关键字后可以跟子查询（关于子查询后面教程会详细讲解，这里了解即可）。</li>
+<li>当排序的字段中存在空值时，ORDER BY 会将该空值作为最小值来对待。</li>
+<li>ORDER BY 指定多个字段进行排序时，MySQL 会按照字段的顺序从左到右依次进行排序。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 查询 tb_students_info 表中的 name 和 height 字段，先按 height 排序，再按 name 排序</span><br><span class="line">mysql&gt; SELECT name,height FROM tb_students_info ORDER BY height,name;</span><br><span class="line">+--------+--------+</span><br><span class="line">| name   | height |</span><br><span class="line">+--------+--------+</span><br><span class="line">| Green  |    158 |</span><br><span class="line">| Dany   |    160 |</span><br><span class="line">| Jane   |    162 |</span><br><span class="line">| Lily   |    165 |</span><br><span class="line">| Tom    |    165 |</span><br><span class="line">| Susan  |    170 |</span><br><span class="line">| John   |    172 |</span><br><span class="line">| Jim    |    175 |</span><br><span class="line">| Thomas |    178 |</span><br><span class="line">| Henry  |    185 |</span><br><span class="line">+--------+--------+</span><br><span class="line">10 rows in set (0.09 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-5-多条件的查询语句"><a href="#5-5-多条件的查询语句" class="headerlink" title="5.5 多条件的查询语句"></a>5.5 多条件的查询语句</h4><p>在 WHERE 关键词后可以有多个查询条件，这样能够使查询结果更加精确。多个查询条件时用逻辑运算符 AND（&amp;&amp;）、OR（||）或 XOR 隔开。</p>
+<ul>
+<li>AND：记录满足所有查询条件时，才会被查询出来。</li>
+<li>OR：记录满足任意一个查询条件时，才会被查询出来。</li>
+<li>XOR：记录满足其中一个条件，并且不满足另一个条件时，才会被查询出来。</li>
+</ul>
+<h4 id="5-6-正则表达式"><a href="#5-6-正则表达式" class="headerlink" title="5.6 正则表达式"></a>5.6 正则表达式</h4><p>（1）格式：属性名 REGEXP ‘匹配方式’</p>
+<ul>
+<li>其中，“属性名”表示需要查询的字段名称；“匹配方式”表示以哪种方式来匹配查询。“匹配方式”中有很多的模式匹配字符，它们分别表示不同的意思。下表列出了 REGEXP 操作符中常用的匹配方式。</li>
+</ul>
+<p>（2）说明</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+<th>例子</th>
+<th>匹配值示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>^</td>
+<td>匹配文本的开始字符</td>
+<td>‘^b’ 匹配以字母 b 开头的字符串</td>
+<td>book、big、banana、bike</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配文本的结束字符</td>
+<td>‘st$’ 匹配以 st 结尾的字符串</td>
+<td>test、resist、persist</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配任何单个字符</td>
+<td>‘b.t’ 匹配任何 b 和 t 之间有一个字符</td>
+<td>bit、bat、but、bite</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配零个或多个在它前面的字符</td>
+<td>‘f*n’ 匹配字符 n 前面有任意个字符 f</td>
+<td>fn、fan、faan、abcn</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配前面的字符 1 次或多次</td>
+<td>‘ba+’ 匹配以 b 开头，后面至少紧跟一个 a</td>
+<td>ba、bay、bare、battle</td>
+</tr>
+<tr>
+<td>&lt;字符串&gt;</td>
+<td>匹配包含指定字符的文本</td>
+<td>‘fa’ 匹配包含‘fa’的文本</td>
+<td>fan、afa、faad</td>
+</tr>
+<tr>
+<td>[字符集合]</td>
+<td>匹配字符集合中的任何一个字符</td>
+<td>‘[xz]’ 匹配 x 或者 z</td>
+<td>dizzy、zebra、x-ray、extra</td>
+</tr>
+<tr>
+<td>[^]</td>
+<td>匹配不在括号中的任何字符</td>
+<td>‘[^abc]’ 匹配任何不包含 a、b 或 c 的字符串</td>
+<td>desk、fox、f8ke</td>
+</tr>
+<tr>
+<td>字符串{n,}</td>
+<td>匹配前面的字符串至少 n 次</td>
+<td>‘b{2}’ 匹配 2 个或更多的 b</td>
+<td>bbb、bbbb、bbbbbbb</td>
+</tr>
+<tr>
+<td>字符串{n,m}</td>
+<td>匹配前面的字符串至少 n 次， 至多 m 次</td>
+<td>‘b{2,4}’ 匹配最少 2 个，最多 4 个 b</td>
+<td>bbb、bbbb</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>MySQL 中的正则表达式与 Java 语言、PHP 语言等编程语言中的正则表达式基本一致。</p>
+</blockquote>
+<h3 id="6、连接"><a href="#6、连接" class="headerlink" title="6、连接"></a>6、连接</h3><h4 id="6-1-交叉连接（cross-join）"><a href="#6-1-交叉连接（cross-join）" class="headerlink" title="6.1 交叉连接（cross join）"></a>6.1 交叉连接（cross join）</h4><p>（1）笛卡尔积（Cartesian product）是指两个集合 X 和 Y 的乘积。</p>
+<ul>
+<li>例如，有 A 和 B 两个集合，它们的值如下：<ul>
+<li>A = {1,2}</li>
+<li>B = {3,4,5}</li>
+</ul>
+</li>
+<li>集合 A×B 和 B×A 的结果集分别表示为：<ul>
+<li>A×B={(1,3), (1,4), (1,5), (2,3), (2,4), (2,5) };</li>
+<li>B×A={(3,1), (3,2), (4,1), (4,2), (5,1), (5,2) };</li>
+</ul>
+</li>
+</ul>
+<p>以上 A×B 和 B×A 的结果就叫做两个集合的笛卡尔积。</p>
+<p>并且，从以上结果我们可以看出：</p>
+<ul>
+<li>两个集合相乘，不满足交换率，即 A×B≠B×A。</li>
+<li>A 集合和 B 集合的笛卡尔积是 A 集合的元素个数 × B 集合的元素个数。</li>
+</ul>
+<p>多表查询遵循的算法就是以上提到的笛卡尔积，表与表之间的连接可以看成是在做乘法运算。在实际应用中，应避免使用笛卡尔积，因为笛卡尔积中容易存在大量的不合理数据，简单来说就是容易导致查询结果重复、混乱。</p>
+<p>（2）返回左表与右表之间符合条件的记录的迪卡尔集。（不常用）</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589902411274.png" alt="58990241127" class="lazyload"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"># 查询 tb_students_info 表中的数据</span><br><span class="line">mysql&gt; SELECT * FROM tb_students_info;</span><br><span class="line">+----+--------+------+------+--------+-----------+</span><br><span class="line">| id | name   | age  | sex  | height | course_id |</span><br><span class="line">+----+--------+------+------+--------+-----------+</span><br><span class="line">|  1 | Dany   |   25 | 男   |    160 |         1 |</span><br><span class="line">|  2 | Green  |   23 | 男   |    158 |         2 |</span><br><span class="line">|  3 | Henry  |   23 | 女   |    185 |         1 |</span><br><span class="line">|  4 | Jane   |   22 | 男   |    162 |         3 |</span><br><span class="line">|  5 | Jim    |   24 | 女   |    175 |         2 |</span><br><span class="line">|  6 | John   |   21 | 女   |    172 |         4 |</span><br><span class="line">|  7 | Lily   |   22 | 男   |    165 |         4 |</span><br><span class="line">|  8 | Susan  |   23 | 男   |    170 |         5 |</span><br><span class="line">|  9 | Thomas |   22 | 女   |    178 |         5 |</span><br><span class="line">| 10 | Tom    |   23 | 女   |    165 |         5 |</span><br><span class="line">+----+--------+------+------+--------+-----------+</span><br><span class="line">10 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line"># 查询 tb_course 表中的数据</span><br><span class="line">mysql&gt; SELECT * FROM tb_course;</span><br><span class="line">+----+-------------+</span><br><span class="line">| id | course_name |</span><br><span class="line">+----+-------------+</span><br><span class="line">|  1 | Java        |</span><br><span class="line">|  2 | MySQL       |</span><br><span class="line">|  3 | Python      |</span><br><span class="line">|  4 | Go          |</span><br><span class="line">|  5 | C++         |</span><br><span class="line">+----+-------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line"># 使用 CROSS JOIN 查询出两张表中的笛卡尔积</span><br><span class="line">mysql&gt; SELECT * FROM tb_course CROSS JOIN tb_students_info;</span><br><span class="line">+----+-------------+----+--------+------+------+--------+-----------+</span><br><span class="line">| id | course_name | id | name   | age  | sex  | height | course_id |</span><br><span class="line">+----+-------------+----+--------+------+------+--------+-----------+</span><br><span class="line">|  1 | Java        |  1 | Dany   |   25 | 男   |    160 |         1 |</span><br><span class="line">|  2 | MySQL       |  1 | Dany   |   25 | 男   |    160 |         1 |</span><br><span class="line">|  3 | Python      |  1 | Dany   |   25 | 男   |    160 |         1 |</span><br><span class="line">|  4 | Go          |  1 | Dany   |   25 | 男   |    160 |         1 |</span><br><span class="line">|  5 | C++         |  1 | Dany   |   25 | 男   |    160 |         1 |</span><br><span class="line">|  1 | Java        |  2 | Green  |   23 | 男   |    158 |         2 |</span><br><span class="line">|  2 | MySQL       |  2 | Green  |   23 | 男   |    158 |         2 |</span><br><span class="line">|  3 | Python      |  2 | Green  |   23 | 男   |    158 |         2 |</span><br><span class="line">|  4 | Go          |  2 | Green  |   23 | 男   |    158 |         2 |</span><br><span class="line">|  5 | C++         |  2 | Green  |   23 | 男   |    158 |         2 |</span><br><span class="line">|  1 | Java        |  3 | Henry  |   23 | 女   |    185 |         1 |</span><br><span class="line">|  2 | MySQL       |  3 | Henry  |   23 | 女   |    185 |         1 |</span><br><span class="line">|  3 | Python      |  3 | Henry  |   23 | 女   |    185 |         1 |</span><br><span class="line">|  4 | Go          |  3 | Henry  |   23 | 女   |    185 |         1 |</span><br><span class="line">|  5 | C++         |  3 | Henry  |   23 | 女   |    185 |         1 |</span><br><span class="line">|  1 | Java        |  4 | Jane   |   22 | 男   |    162 |         3 |</span><br><span class="line">|  2 | MySQL       |  4 | Jane   |   22 | 男   |    162 |         3 |</span><br><span class="line">|  3 | Python      |  4 | Jane   |   22 | 男   |    162 |         3 |</span><br><span class="line">|  4 | Go          |  4 | Jane   |   22 | 男   |    162 |         3 |</span><br><span class="line">|  5 | C++         |  4 | Jane   |   22 | 男   |    162 |         3 |</span><br><span class="line">|  1 | Java        |  5 | Jim    |   24 | 女   |    175 |         2 |</span><br><span class="line">|  2 | MySQL       |  5 | Jim    |   24 | 女   |    175 |         2 |</span><br><span class="line">|  3 | Python      |  5 | Jim    |   24 | 女   |    175 |         2 |</span><br><span class="line">|  4 | Go          |  5 | Jim    |   24 | 女   |    175 |         2 |</span><br><span class="line">|  5 | C++         |  5 | Jim    |   24 | 女   |    175 |         2 |</span><br><span class="line">|  1 | Java        |  6 | John   |   21 | 女   |    172 |         4 |</span><br><span class="line">|  2 | MySQL       |  6 | John   |   21 | 女   |    172 |         4 |</span><br><span class="line">|  3 | Python      |  6 | John   |   21 | 女   |    172 |         4 |</span><br><span class="line">|  4 | Go          |  6 | John   |   21 | 女   |    172 |         4 |</span><br><span class="line">|  5 | C++         |  6 | John   |   21 | 女   |    172 |         4 |</span><br><span class="line">|  1 | Java        |  7 | Lily   |   22 | 男   |    165 |         4 |</span><br><span class="line">|  2 | MySQL       |  7 | Lily   |   22 | 男   |    165 |         4 |</span><br><span class="line">|  3 | Python      |  7 | Lily   |   22 | 男   |    165 |         4 |</span><br><span class="line">|  4 | Go          |  7 | Lily   |   22 | 男   |    165 |         4 |</span><br><span class="line">|  5 | C++         |  7 | Lily   |   22 | 男   |    165 |         4 |</span><br><span class="line">|  1 | Java        |  8 | Susan  |   23 | 男   |    170 |         5 |</span><br><span class="line">|  2 | MySQL       |  8 | Susan  |   23 | 男   |    170 |         5 |</span><br><span class="line">|  3 | Python      |  8 | Susan  |   23 | 男   |    170 |         5 |</span><br><span class="line">|  4 | Go          |  8 | Susan  |   23 | 男   |    170 |         5 |</span><br><span class="line">|  5 | C++         |  8 | Susan  |   23 | 男   |    170 |         5 |</span><br><span class="line">|  1 | Java        |  9 | Thomas |   22 | 女   |    178 |         5 |</span><br><span class="line">|  2 | MySQL       |  9 | Thomas |   22 | 女   |    178 |         5 |</span><br><span class="line">|  3 | Python      |  9 | Thomas |   22 | 女   |    178 |         5 |</span><br><span class="line">|  4 | Go          |  9 | Thomas |   22 | 女   |    178 |         5 |</span><br><span class="line">|  5 | C++         |  9 | Thomas |   22 | 女   |    178 |         5 |</span><br><span class="line">|  1 | Java        | 10 | Tom    |   23 | 女   |    165 |         5 |</span><br><span class="line">|  2 | MySQL       | 10 | Tom    |   23 | 女   |    165 |         5 |</span><br><span class="line">|  3 | Python      | 10 | Tom    |   23 | 女   |    165 |         5 |</span><br><span class="line">|  4 | Go          | 10 | Tom    |   23 | 女   |    165 |         5 |</span><br><span class="line">|  5 | C++         | 10 | Tom    |   23 | 女   |    165 |         5 |</span><br><span class="line">+----+-------------+----+--------+------+------+--------+-----------+</span><br><span class="line">50 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-2-内连接（INNER-JOIN）"><a href="#6-2-内连接（INNER-JOIN）" class="headerlink" title="6.2 内连接（INNER JOIN）"></a>6.2 内连接（INNER JOIN）</h4><p>内连接查询能将左表（表 A）和右表（表 B）中能关联起来的数据连接后返回。</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589901793020.png" alt="58990179302" class="lazyload"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT A.PK AS A_PK, B.PK AS B_PK,</span><br><span class="line">       A.Value AS A_Value, B.Value AS B_Value</span><br><span class="line">FROM Table_A A</span><br><span class="line">INNER JOIN Table_B B</span><br><span class="line">ON A.PK &#x3D; B.PK;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-3-外连接（全连接-左连接-右连接）"><a href="#6-3-外连接（全连接-左连接-右连接）" class="headerlink" title="6.3 外连接（全连接/左连接/右连接）"></a>6.3 外连接（全连接/左连接/右连接）</h4><p>（1）全连接（FULL OUTER JOIN）</p>
+<p>FULL OUTER JOIN 一般被译作外连接、全连接，实际查询语句中可以写作 FULL OUTER JOIN 或 FULL JOIN。外连接查询能返回左右表里的所有记录，其中左右表里能关联起来的记录被连接后返回。</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589902030267.png" alt="58990203026" class="lazyload"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT A.PK AS A_PK, B.PK AS B_PK,</span><br><span class="line">       A.Value AS A_Value, B.Value AS B_Value</span><br><span class="line">FROM Table_A A</span><br><span class="line">FULL OUTER JOIN Table_B B</span><br><span class="line">ON A.PK &#x3D; B.PK;</span><br></pre></td></tr></table></figure>
+
+<p>（2）左连接（<strong>LEFT JOIN</strong>）</p>
+<p>LEFT JOIN 一般被译作左连接，也写作 LEFT OUTER JOIN。左连接查询会返回左表（表 A）中所有记录，不管右表（表 B）中有没有关联的数据。在右表中找到的关联数据列也会被一起返回。</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589901939132.png" alt="58990193913" class="lazyload"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT A.PK AS A_PK, B.PK AS B_PK,</span><br><span class="line">       A.Value AS A_Value, B.Value AS B_Value</span><br><span class="line">FROM Table_A A</span><br><span class="line">LEFT JOIN Table_B B</span><br><span class="line">ON A.PK &#x3D; B.PK;</span><br></pre></td></tr></table></figure>
+
+<p>（3）右连接（RIGHT JOIN）</p>
+<p>RIGHT JOIN 一般被译作右连接，也写作 RIGHT OUTER JOIN。右连接查询会返回右表（表 B）中所有记录，不管左表（表 A）中有没有关联的数据。在左表中找到的关联数据列也会被一起返回。</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589902000981.png" alt="58990200098" class="lazyload"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="6-4-延伸1（LEFT-JOIN-EXCLUDING-INNER-JOIN）"><a href="#6-4-延伸1（LEFT-JOIN-EXCLUDING-INNER-JOIN）" class="headerlink" title="6.4 延伸1（LEFT JOIN EXCLUDING INNER JOIN）"></a>6.4 延伸1（LEFT JOIN EXCLUDING INNER JOIN）</h4><p>返回左表有但右表没有关联数据的记录集。</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589902198639.png" alt="58990219863" class="lazyload"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT A.PK AS A_PK, B.PK AS B_PK,</span><br><span class="line">       A.Value AS A_Value, B.Value AS B_Value</span><br><span class="line">FROM Table_A A</span><br><span class="line">LEFT JOIN Table_B B</span><br><span class="line">ON A.PK &#x3D; B.PK</span><br><span class="line">WHERE B.PK IS NULL;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-5-延伸2（RIGHT-JOIN-EXCLUDING-INNER-JOIN）"><a href="#6-5-延伸2（RIGHT-JOIN-EXCLUDING-INNER-JOIN）" class="headerlink" title="6.5 延伸2（RIGHT JOIN EXCLUDING INNER JOIN）"></a>6.5 延伸2（RIGHT JOIN EXCLUDING INNER JOIN）</h4><p>返回右表有但左表没有关联数据的记录集。</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589902248086.png" alt="58990224808" class="lazyload"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="6-6-延伸3（FULL-OUTER-JOIN-EXCLUDING-INNER-JOIN）"><a href="#6-6-延伸3（FULL-OUTER-JOIN-EXCLUDING-INNER-JOIN）" class="headerlink" title="6.6 延伸3（FULL OUTER JOIN EXCLUDING INNER JOIN）"></a>6.6 延伸3（FULL OUTER JOIN EXCLUDING INNER JOIN）</h4><p>返回左表和右表里没有相互关联的记录集。</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589902296339.png" alt="58990229633" class="lazyload"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="五、备份"><a href="#五、备份" class="headerlink" title="五、备份"></a>五、备份</h2><p>使用 mysqldump 命令备份一个数据库的语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u username -p dbname [tbname ...]&gt; filename.sql</span><br></pre></td></tr></table></figure>
+
+<p>对上述语法参数说明如下：</p>
+<ul>
+<li>username：表示用户名称；</li>
+<li>dbname：表示需要备份的数据库名称；</li>
+<li>tbname：表示数据库中需要备份的数据表，可以指定多个数据表。省略该参数时，会备份整个数据库；</li>
+<li>右箭头“&gt;”：用来告诉 mysqldump 将备份数据表的定义和数据写入备份文件；</li>
+<li>filename.sql：表示备份文件的名称，文件名前面可以加绝对路径。通常将数据库备份成一个后缀名为<code>.sql</code>的文件。</li>
+</ul>
+<p>注意：mysqldump 命令备份的文件并非一定要求后缀名为<code>.sql</code>，备份成其他格式的文件也是可以的。例如，后缀名为<code>.txt</code>的文件。通常情况下，建议备份成后缀名为<code>.sql</code> 的文件。因为，后缀名为<code>.sql</code>的文件给人第一感觉就是与数据库有关的文件。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://c.biancheng.net/mysql/mysql/10/" target="_blank" rel="noopener">http://c.biancheng.net/mysql/mysql/10/</a></p>
 
   </article>
 
@@ -523,7 +775,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1589815777119"></script>-->
+<!--<script src="/js/app.js?v=1589965121462"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
