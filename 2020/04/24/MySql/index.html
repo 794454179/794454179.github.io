@@ -12,12 +12,12 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="MySQL——数据类型、存储引擎、数据库操作、数据表操作、常用SQL">
+  <meta name="description" content="MySQL——数据类型、存储引擎、数据库操作、数据表操作、常用SQL、备份、调优、视图、悲观锁和乐观锁、行级锁（共享锁和排他锁）、表级锁、页级锁">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL">
 <meta property="og:url" content="http://yoursite.com/2020/04/24/MySql/index.html">
 <meta property="og:site_name" content="My-Blog">
-<meta property="og:description" content="MySQL——数据类型、存储引擎、数据库操作、数据表操作、常用SQL">
+<meta property="og:description" content="MySQL——数据类型、存储引擎、数据库操作、数据表操作、常用SQL、备份、调优、视图、悲观锁和乐观锁、行级锁（共享锁和排他锁）、表级锁、页级锁">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589902411274.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589901793020.png">
@@ -27,15 +27,33 @@
 <meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589902198639.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589902248086.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589902296339.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589986442590.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/F:%5Cblog%5Csource_posts%5CMySql%5C1589986485652.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589986598562.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589986706176.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589986776967.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589981944366.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589982081983.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589969692670.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589969724647.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589970393411.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589970677372.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589982311116.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589982708064.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589982760264.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589983774887.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589983803497.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589984387774.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589984429006.png">
 <meta property="article:published_time" content="2020-04-24T09:41:22.000Z">
-<meta property="article:modified_time" content="2020-05-19T16:40:45.119Z">
+<meta property="article:modified_time" content="2020-05-20T15:33:59.600Z">
 <meta property="article:author" content="Mr.wang">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/04/24/MySql/1589902411274.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1589965121461">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1590122440069">-->
 
    
     <style>
@@ -227,8 +245,8 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月24日</a>
-    <a><i class="nexmoefont icon-areachart"></i>7k 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 32 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>12.4k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 55 分钟</a>
 </div>
 
   <div class="nexmoe-post-right">
@@ -236,7 +254,7 @@
   </div>
 
   <article>
-    <p>MySQL——数据类型、存储引擎、数据库操作、数据表操作、常用SQL<a id="more"></a></p>
+    <p>MySQL——数据类型、存储引擎、数据库操作、数据表操作、常用SQL、备份、调优、视图、悲观锁和乐观锁、行级锁（共享锁和排他锁）、表级锁、页级锁<a id="more"></a></p>
 <h2 id="一、MySQL-数据类型和存储引擎"><a href="#一、MySQL-数据类型和存储引擎" class="headerlink" title="一、MySQL-数据类型和存储引擎"></a>一、MySQL-数据类型和存储引擎</h2><h3 id="1、数据类型"><a href="#1、数据类型" class="headerlink" title="1、数据类型"></a>1、数据类型</h3><h4 id="1-1-数值类型"><a href="#1-1-数值类型" class="headerlink" title="1.1  数值类型"></a>1.1  数值类型</h4><p>​    整数类型包括 TINYINT、SMALLINT、MEDIUMINT、INT、BIGINT，浮点数类型包括 FLOAT 和 DOUBLE，定点数类型为 DECIMAL。</p>
 <h4 id="1-2-日期-时间类型"><a href="#1-2-日期-时间类型" class="headerlink" title="1.2 日期/时间类型"></a>1.2 日期/时间类型</h4><p>​    包括 YEAR、TIME、DATE、DATETIME 和 TIMESTAMP。</p>
 <h4 id="1-3-字符串类型"><a href="#1-3-字符串类型" class="headerlink" title="1.3 字符串类型"></a>1.3 字符串类型</h4><p>​    包括 CHAR、VARCHAR、BINARY、VARBINARY、BLOB、TEXT、ENUM 和 SET 等。</p>
@@ -719,7 +737,35 @@
 <p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589902296339.png" alt="58990229633" class="lazyload"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="五、备份"><a href="#五、备份" class="headerlink" title="五、备份"></a>五、备份</h2><p>使用 mysqldump 命令备份一个数据库的语法格式如下：</p>
+<h4 id="6-7-内连接、左连接、右连接—–实例"><a href="#6-7-内连接、左连接、右连接—–实例" class="headerlink" title="6.7 内连接、左连接、右连接—–实例"></a>6.7 内连接、左连接、右连接—–实例</h4><p><strong>首先先建两个表，student表和score表</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student;</span><br></pre></td></tr></table></figure>
+
+<p>student表数据如下：</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589986442590.png" alt="58998644259" class="lazyload"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from score;</span><br></pre></td></tr></table></figure>
+
+<p>score表数据如下：</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/F:%5Cblog%5Csource_posts%5CMySql%5C1589986485652.png" alt="58998648565" class="lazyload"></p>
+<p>可以看到students表中stu_id为16048008的记录对应score表没有数据;</p>
+<p>（1）内连接只显示两表中有关联的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student inner join score on student.sid &#x3D; score.stu_id;</span><br></pre></td></tr></table></figure>
+
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589986598562.png" alt="58998659856" class="lazyload"></p>
+<p>从表中可以看出student表中sid=16048008，sid=16048009，sid=160480010在score表中没有对应数据，所以内连接的结果不显示这三名学生。</p>
+<p>（2）左连接显示左表所有数据，右表没有对应的数据用NULL补齐，多了的数据删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student left join score on student.sid &#x3D; score.stu_id;</span><br></pre></td></tr></table></figure>
+
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589986706176.png" alt="58998670617" class="lazyload"></p>
+<p>从结果可以看出sid=16048008，sid=16048009，sid=160480010在score表中没有数据的部分用NULL代替。</p>
+<p>（3）右连接显示右表所有数据，左表没有对应的数据用NULL对齐，多了的数据删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student right join score on student.sid &#x3D; score.stu_id;</span><br></pre></td></tr></table></figure>
+
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589986776967.png" alt="58998677696" class="lazyload"></p>
+<p>score表中没有的数据student表也不显示</p>
+<h2 id="五、备份"><a href="#五、备份" class="headerlink" title="五、备份"></a>五、备份</h2><h3 id="1、冷备份"><a href="#1、冷备份" class="headerlink" title="1、冷备份"></a>1、冷备份</h3><p>在MySQL停机的情况下，进行相关的备份操作。</p>
+<p>一般情况下是停机后进行数据目录的相关的拷贝，转移，重启数据库。</p>
+<h3 id="2、热备份"><a href="#2、热备份" class="headerlink" title="2、热备份"></a>2、热备份</h3><h4 id="2-1-mysqldump"><a href="#2-1-mysqldump" class="headerlink" title="2.1 mysqldump"></a>2.1 mysqldump</h4><p>（MySQL官方提供的备份工具）（可以提供全备或者指定具体的数据库的或者表的备份）</p>
+<p>（1）使用 mysqldump 命令备份一个数据库的语法格式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u username -p dbname [tbname ...]&gt; filename.sql</span><br></pre></td></tr></table></figure>
 
 <p>对上述语法参数说明如下：</p>
@@ -730,8 +776,165 @@
 <li>右箭头“&gt;”：用来告诉 mysqldump 将备份数据表的定义和数据写入备份文件；</li>
 <li>filename.sql：表示备份文件的名称，文件名前面可以加绝对路径。通常将数据库备份成一个后缀名为<code>.sql</code>的文件。</li>
 </ul>
-<p>注意：mysqldump 命令备份的文件并非一定要求后缀名为<code>.sql</code>，备份成其他格式的文件也是可以的。例如，后缀名为<code>.txt</code>的文件。通常情况下，建议备份成后缀名为<code>.sql</code> 的文件。因为，后缀名为<code>.sql</code>的文件给人第一感觉就是与数据库有关的文件。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://c.biancheng.net/mysql/mysql/10/" target="_blank" rel="noopener">http://c.biancheng.net/mysql/mysql/10/</a></p>
+<p>（2）注意：mysqldump 命令备份的文件并非一定要求后缀名为<code>.sql</code>，备份成其他格式的文件也是可以的。例如，后缀名为<code>.txt</code>的文件。通常情况下，建议备份成后缀名为<code>.sql</code> 的文件。因为，后缀名为<code>.sql</code>的文件给人第一感觉就是与数据库有关的文件。</p>
+<p>（3）例子：导出所有数据库</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589981944366.png" alt="58998194436" class="lazyload"></p>
+<p>（4）恢复：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; source &#x2F;tmp&#x2F;all.sql</span><br></pre></td></tr></table></figure>
+
+<p>（5）具体代码</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589982081983.png" alt="58998208198" class="lazyload"></p>
+<h4 id="2-2-xtrabackup-percona-第三方公司提供的热备份工具"><a href="#2-2-xtrabackup-percona-第三方公司提供的热备份工具" class="headerlink" title="2.2 xtrabackup percona 第三方公司提供的热备份工具"></a>2.2 xtrabackup percona 第三方公司提供的热备份工具</h4><p>（1）全备</p>
+<p>（2）增备</p>
+<h2 id="六、索引"><a href="#六、索引" class="headerlink" title="六、索引"></a>六、索引</h2><h3 id="1、InnoDb（聚集索引）"><a href="#1、InnoDb（聚集索引）" class="headerlink" title="1、InnoDb（聚集索引）"></a>1、InnoDb（聚集索引）</h3><h4 id="1-1-主键索引"><a href="#1-1-主键索引" class="headerlink" title="1.1 主键索引"></a>1.1 主键索引</h4><p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589969692670.png" alt="58996969267" class="lazyload"></p>
+<h4 id="1-2-非主键索引"><a href="#1-2-非主键索引" class="headerlink" title="1.2 非主键索引"></a>1.2 非主键索引</h4><p>先通过名字（name） 查询出存储的主键索引的ID，然后在通过ID去主键索引的B+Tree查询信息。</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589969724647.png" alt="58996972464" class="lazyload"></p>
+<h3 id="2、MyISAM（非聚集索引）"><a href="#2、MyISAM（非聚集索引）" class="headerlink" title="2、MyISAM（非聚集索引）"></a>2、MyISAM（非聚集索引）</h3><p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589970393411.png" alt="58997039341" class="lazyload"></p>
+<h2 id="七、调优"><a href="#七、调优" class="headerlink" title="七、调优"></a>七、调优</h2><h3 id="1、SQL调优"><a href="#1、SQL调优" class="headerlink" title="1、SQL调优"></a>1、SQL调优</h3><p>explain sql语句</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589970677372.png" alt="58997067737" class="lazyload"></p>
+<h2 id="八、视图"><a href="#八、视图" class="headerlink" title="八、视图"></a>八、视图</h2><h3 id="1、概念及好处"><a href="#1、概念及好处" class="headerlink" title="1、概念及好处"></a>1、概念及好处</h3><p>（1）在实际过程中，公司有不同角色的工作人员，我们以销售公司为例的话，采购人员，可以需要一些与其有关的数据，而与他无关的数据，对他没有任何意义，我们可以根据这一实际情况，专门为采购人员创建一个视图，以后他在查询数据时，只需select   *   from   view_caigou   就可以啦。</p>
+<p>（2）<strong>第一点：使用视图，可以定制用户数据，聚焦特定的数据。</strong></p>
+<p>​    比如一个比较复杂的查询不想每次都写很多语句，就可以写个视图。或者给特定用户开放某些表的读取权限，但要加一些行和列的限制，也可以写个视图。</p>
+<p>（3）<strong>第二点：使用视图，可以简化数据操作。</strong></p>
+<p>​    解释：我们在使用查询时，在很多时候我们要使用聚合函数，同时还要显示其它字段的信息，可能还会需要关联到其它表，这时写的语句可能会很长，如果这个动作频繁发生的话，我们可以创建视图，这以后，我们只需要select   *   from   view1就可以啦。</p>
+<p>（4）<strong>第三点：使用视图，基表中的数据就有了一定的安全性</strong></p>
+<p>​    因为视图是虚拟的，物理上是不存在的，只是存储了数据的集合，我们可以将基表中重要的字段信息，可以不通过视图给用户，视图是动态的数据的集合，数据是随着基表的更新而更新。同时，用户对视图，不可以随意的更改和删除，可以保证数据的安全性。</p>
+<p>（5）<strong>第四点：可以合并分离的数据，创建分区视图</strong></p>
+<p>​    随着社会的发展，公司的业务量的不断的扩大，一个大公司，下属都设有很多的分公司，为了管理方便，我们需要统一表的结构，定期查看各公司业务情况，而分别看各个公司的数据很不方便，没有很好的可比性，如果将这些数据合并为一个表格里，就方便多啦，这时我们就可以使用union关键字，将各分公司的数据合并为一个视图。</p>
+<h3 id="2、创建-更新-删除-查看视图"><a href="#2、创建-更新-删除-查看视图" class="headerlink" title="2、创建/更新/删除/查看视图"></a>2、创建/更新/删除/查看视图</h3><p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589982311116.png" alt="58998231111" class="lazyload"></p>
+<h3 id="3、举例"><a href="#3、举例" class="headerlink" title="3、举例"></a>3、举例</h3><p>（1）对视图进行增加数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">insert into TemArticle (type,author,au_id,articles)values(&#39;Linux&#39;,&#39;vivi&#39;,2019002,20);</span><br><span class="line">insert into TemArticle(type,author,articles,)values(&#39;perl&#39;,&#39;vivi&#39;,23);</span><br></pre></td></tr></table></figure>
+
+<p>（2）对视图进行删除数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from TemArticle where fans&#x3D;&#39;50&#39;;</span><br></pre></td></tr></table></figure>
+
+<p>（3）对视图进行更新数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update TemArticle set articles&#x3D;55 where type&#x3D;&#39;MySQL&#39;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、举例"><a href="#4、举例" class="headerlink" title="4、举例"></a>4、举例</h3><p>（1）新建和查询视图：</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589982708064.png" alt="58998270806" class="lazyload"></p>
+<p>（2）若视图不存在，则创建视图；若存在，则更新视图（修改视图方法1）：</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589982760264.png" alt="58998276026" class="lazyload"></p>
+<h2 id="九、悲观锁和乐观锁"><a href="#九、悲观锁和乐观锁" class="headerlink" title="九、悲观锁和乐观锁"></a>九、悲观锁和乐观锁</h2><h3 id="1、悲观锁"><a href="#1、悲观锁" class="headerlink" title="1、悲观锁"></a>1、悲观锁</h3><ul>
+<li>当我们要对一个数据库中的一条数据进行修改的时候，为了避免同时被其他人修改，最好的办法就是直接对该数据进行加锁以防止并发。这种借助<strong>数据库锁机制在修改数据之前先锁定</strong>，再修改的方式被称之为悲观并发控制（又名“悲观锁”，Pessimistic Concurrency Control，缩写“PCC”）。</li>
+<li><strong>之所以叫做悲观锁，是因为这是一种对数据的修改抱有悲观态度的并发控制方式。我们一般认为数据被并发修改的概率比较大，所以需要在修改之前先加锁。</strong></li>
+<li>悲观并发控制实际上是“先取锁再访问”的保守策略，为数据处理的安全提供了保证。</li>
+</ul>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589983774887.png" alt="58998377488" class="lazyload"></p>
+<ul>
+<li><strong>但是在效率方面，处理加锁的机制会让数据库产生额外的开销，还有增加产生死锁的机会；</strong>另外，还会降低并行性，一个事务如果锁定了某行数据，其他事务就必须等待该事务处理完才可以处理那行数据。</li>
+</ul>
+<h3 id="2、乐观锁"><a href="#2、乐观锁" class="headerlink" title="2、乐观锁"></a>2、乐观锁</h3><ul>
+<li>乐观锁（ Optimistic Locking ） 是相对悲观锁而言的，乐观锁假设数据一般情况下不会造成冲突，所以在数据进行提交更新的时候，才会正式对数据的冲突与否进行检测，如果发现冲突了，则让返回用户错误的信息，让用户决定如何去做。</li>
+<li><strong>相对于悲观锁，在对数据库进行处理的时候，乐观锁并不会使用数据库提供的锁机制。一般的实现乐观锁的方式就是记录数据版本。</strong></li>
+</ul>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589983803497.png" alt="58998380349" class="lazyload"></p>
+<ul>
+<li>乐观并发控制相信事务之间的数据竞争(data race)的概率是比较小的，因此尽可能直接做下去，直到提交的时候才去锁定，所以不会产生任何锁和死锁。</li>
+</ul>
+<h3 id="3、悲观锁实现方式"><a href="#3、悲观锁实现方式" class="headerlink" title="3、悲观锁实现方式"></a>3、悲观锁实现方式</h3><p>（1）悲观锁的实现，往往依靠数据库提供的锁机制。在数据库中，悲观锁的流程如下：</p>
+<ul>
+<li>在对记录进行修改前，先尝试为该记录加上排他锁（exclusive locking）。</li>
+<li>如果加锁失败，说明该记录正在被修改，那么当前查询可能要等待或者抛出异常。具体响应方式由开发者根据实际需要决定。</li>
+<li>如果成功加锁，那么就可以对记录做修改，事务完成后就会解锁了。</li>
+<li>其间如果有其他对该记录做修改或加排他锁的操作，都会等待我们解锁或直接抛出异常。</li>
+</ul>
+<p>（2）我们拿比较常用的MySql Innodb引擎举例，来说明一下在SQL中如何使用悲观锁。</p>
+<blockquote>
+<p>要使用悲观锁，我们必须关闭mysql数据库的自动提交属性，因为MySQL默认使用autocommit模式，也就是说，当你执行一个更新操作后，MySQL会立刻将结果进行提交。set autocommit=0;</p>
+</blockquote>
+<p>我们举一个简单的例子，如淘宝下单过程中扣减库存的需求说明一下如何使用悲观锁：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;0.开始事务</span><br><span class="line">begin; </span><br><span class="line">&#x2F;&#x2F;1.查询出商品库存信息</span><br><span class="line">select quantity from items where id&#x3D;1 for update;</span><br><span class="line">&#x2F;&#x2F;2.修改商品库存为2</span><br><span class="line">update items set quantity&#x3D;2 where id &#x3D; 1;</span><br><span class="line">&#x2F;&#x2F;3.提交事务</span><br><span class="line">commit;</span><br></pre></td></tr></table></figure>
+
+<p>以上，在对id = 1的记录修改前，先通过for update的方式进行加锁，然后再进行修改。这就是比较典型的悲观锁策略。</p>
+<p>如果以上修改库存的代码发生并发，同一时间只有一个线程可以开启事务并获得id=1的锁，其它的事务必须等本次事务提交之后才能执行。这样我们可以保证当前的数据不会被其它事务修改。</p>
+<blockquote>
+<p>上面我们提到，使用select…for update会把数据给锁住，不过我们需要注意一些锁的级别，MySQL InnoDB默认行级锁。行级锁都是基于索引的，如果一条SQL语句用不到索引是不会使用行级锁的，会使用表级锁把整张表锁住，这点需要注意。</p>
+</blockquote>
+<h3 id="4、乐观锁实现方式"><a href="#4、乐观锁实现方式" class="headerlink" title="4、乐观锁实现方式"></a>4、乐观锁实现方式</h3><p>（1）使用乐观锁就不需要借助数据库的锁机制了。</p>
+<ul>
+<li>乐观锁的概念中其实已经阐述了他的具体实现细节：主要就是两个步骤：冲突检测和数据更新。其实现方式有一种比较典型的就是Compare and Swap(CAS)。</li>
+<li>CAS是项乐观锁技术，当多个线程尝试使用CAS同时更新同一个变量时，只有其中一个线程能更新变量的值，而其它线程都失败，失败的线程并不会被挂起，而是被告知这次竞争中失败，并可以再次尝试。</li>
+<li>比如前面的扣减库存问题，通过乐观锁可以实现如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;查询出商品库存信息，quantity &#x3D; 3</span><br><span class="line">select quantity from items where id&#x3D;1</span><br><span class="line">&#x2F;&#x2F;修改商品库存为2</span><br><span class="line">update items set quantity&#x3D;2 where id&#x3D;1 and quantity &#x3D; 3;以上，我们在更新之前，先查询一下库存表中当前库存数（quantity），然后在做update的时候，以库存数作为一个修改条件。当我们提交更新的时候，判断数据库表对应记录的当前库存数与第一次取出来的库存数进行比对，如果数据库表当前库存数与第一次取出来的库存数相等，则予以更新，否则认为是过期数据。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>以上，我们在更新之前，先查询一下库存表中当前库存数（quantity），然后在做update的时候，以库存数作为一个修改条件。当我们提交更新的时候，判断数据库表对应记录的当前库存数与第一次取出来的库存数进行比对，如果数据库表当前库存数与第一次取出来的库存数相等，则予以更新，否则认为是过期数据。</li>
+</ul>
+<p>（2）以上更新语句存在一个比较重要的问题，即传说中的ABA问题。</p>
+<p>​    比如说一个线程one从数据库中取出库存数3，这时候另一个线程two也从数据库中库存数3，并且two进行了一些操作变成了2，然后two又将库存数变成3，这时候线程one进行CAS操作发现数据库中仍然是3，然后one操作成功。尽管线程one的CAS操作成功，但是不代表这个过程就是没有问题的。</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589984387774.png" alt="58998438777" class="lazyload"></p>
+<p>（3）有一个比较好的办法可以解决ABA问题，那就是通过一个单独的可以顺序递增的version字段。改为以下方式即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;查询出商品信息，version &#x3D; 1</span><br><span class="line">select version from items where id&#x3D;1</span><br><span class="line">&#x2F;&#x2F;修改商品库存为2</span><br><span class="line">update items set quantity&#x3D;2,version &#x3D; 3 where id&#x3D;1 and version &#x3D; 2;</span><br></pre></td></tr></table></figure>
+
+<p>​    乐观锁每次在执行数据的修改操作时，都会带上一个版本号，一旦版本号和数据的版本号一致就可以执行修改操作并对版本号执行+1操作，否则就执行失败。因为每次操作的版本号都会随之增加，所以不会出现ABA问题，因为版本号只会增加不会减少。</p>
+<p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589984429006.png" alt="58998442900" class="lazyload"></p>
+<p>除了version以外，还可以使用时间戳，因为时间戳天然具有顺序递增性。</p>
+<p>（4）以上SQL其实还是有一定的问题的，就是<strong>一旦发上高并发的时候，就只有一个线程可以修改成功，那么就会存在大量的失败。</strong></p>
+<p>对于像淘宝这样的电商网站，高并发是常有的事，总让用户感知到失败显然是不合理的。所以，还是要想办法减少乐观锁的粒度的。</p>
+<p>有一条比较好的建议，可以减小乐观锁力度，最大程度的提升吞吐率，提高并发能力！如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;修改商品库存</span><br><span class="line">update item </span><br><span class="line">set quantity&#x3D;quantity - 1 </span><br><span class="line">where id &#x3D; 1 and quantity - 1 &gt; 0</span><br></pre></td></tr></table></figure>
+
+<p>以上SQL语句中，如果用户下单数为1，则通过<code>quantity - 1 &gt; 0</code>的方式进行乐观锁控制。</p>
+<p>以上update语句，在执行过程中，会在一次原子操作中自己查询一遍quantity的值，并将其扣减掉1。</p>
+<p><strong>高并发环境下锁粒度把控是一门重要的学问，选择一个好的锁，在保证数据安全的情况下，可以大大提升吞吐率，进而提升性能。</strong></p>
+<h3 id="5、如何选择"><a href="#5、如何选择" class="headerlink" title="5、如何选择"></a>5、如何选择</h3><p>在乐观锁与悲观锁的选择上面，主要看下两者的区别以及适用场景就可以了。</p>
+<p>（1）乐观锁并未真正加锁，效率高。一旦锁的粒度掌握不好，更新失败的概率就会比较高，容易发生业务失败。 </p>
+<p>（2）悲观锁依赖数据库锁，效率低。更新失败的概率比较低。</p>
+<p><strong>随着互联网三高架构（高并发、高性能、高可用）的提出，悲观锁已经越来越少的被使用到生产环境中了，尤其是并发量比较大的业务场景。</strong></p>
+<h2 id="十、行级锁、表级锁、页级锁"><a href="#十、行级锁、表级锁、页级锁" class="headerlink" title="十、行级锁、表级锁、页级锁"></a>十、行级锁、表级锁、页级锁</h2><ul>
+<li>在计算机科学中，锁是在执行多线程时用于强行限制资源访问的同步机制，即用于在并发控制中保证对互斥要求的满足。</li>
+<li>在DBMS中，可以按照锁的粒度把数据库锁分为行级锁(INNODB引擎)、表级锁(MYISAM引擎)和页级锁(BDB引擎 )。</li>
+</ul>
+<h3 id="1、行级锁"><a href="#1、行级锁" class="headerlink" title="1、行级锁"></a>1、行级锁</h3><h4 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1 介绍"></a>1.1 介绍</h4><p>​    行级锁是Mysql中锁定粒度最细的一种锁，表示只针对当前操作的行进行加锁。行级锁能大大减少数据库操作的冲突。其加锁粒度最小，但加锁的开销也最大。行级锁分为<strong>共享锁</strong> 和 <strong>排他锁</strong>。</p>
+<h4 id="1-2-特点"><a href="#1-2-特点" class="headerlink" title="1.2 特点"></a>1.2 特点</h4><p>开销大，加锁慢；会出现死锁；锁定粒度最小，发生锁冲突的概率最低，并发度也最高。</p>
+<h4 id="1-3-共享锁-Share-Lock"><a href="#1-3-共享锁-Share-Lock" class="headerlink" title="1.3 共享锁(Share Lock)"></a>1.3 共享锁(Share Lock)</h4><p>（1）共享锁又称读锁，是读取操作创建的锁。其他用户可以并发读取数据，但任何事务都不能对数据进行修改（获取数据上的排他锁），直到已释放所有共享锁。</p>
+<p>​    如果事务T对数据A加上共享锁后，则其他事务只能对A再加共享锁，不能加排他锁。获准共享锁的事务只能读数据，不能修改数据。</p>
+<p>（2）用法：</p>
+<p><code>SELECT ... LOCK IN SHARE MODE;</code></p>
+<p>在查询语句后面增加<code>LOCK IN SHARE MODE</code>，Mysql会对查询结果中的每行都加共享锁，当没有其他线程对查询结果集中的任何一行使用排他锁时，可以成功申请共享锁，否则会被阻塞。其他线程也可以读取使用了共享锁的表，而且这些线程读取的是同一个版本的数据。</p>
+<h4 id="1-4-排他锁（eXclusive-Lock）"><a href="#1-4-排他锁（eXclusive-Lock）" class="headerlink" title="1.4 排他锁（eXclusive Lock）"></a>1.4 排他锁（eXclusive Lock）</h4><p>（1）排他锁又称写锁，如果事务T对数据A加上排他锁后，则其他事务不能再对A加任任何类型的封锁。获准排他锁的事务既能读数据，又能修改数据。</p>
+<p>（2）用法：</p>
+<p><code>SELECT ... FOR UPDATE;</code></p>
+<p>在查询语句后面增加<code>FOR UPDATE</code>，Mysql会对查询结果中的每行都加排他锁，当没有其他线程对查询结果集中的任何一行使用排他锁时，可以成功申请排他锁，否则会被阻塞。</p>
+<h4 id="1-5-意向锁"><a href="#1-5-意向锁" class="headerlink" title="1.5 意向锁"></a>1.5 意向锁</h4><p>InnoDB还有两个表锁：</p>
+<p>意向共享锁（IS）：表示事务准备给数据行加入共享锁，也就是说一个数据行加共享锁前必须先取得该表的IS锁</p>
+<p>意向排他锁（IX）：类似上面，表示事务准备给数据行加入排他锁，说明事务在一个数据行加排他锁前必须先取得该表的IX锁。</p>
+<p><strong>意向锁是InnoDB自动加的，不需要用户干预。</strong></p>
+<p>对于insert、update、delete，InnoDB会自动给涉及的数据加排他锁（X）；对于一般的Select语句，InnoDB不会加任何锁，事务可以通过以下语句给显示加共享锁或排他锁。</p>
+<p>共享锁：<code>SELECT ... LOCK IN SHARE MODE;</code></p>
+<p>排他锁：<code>SELECT ... FOR UPDATE;</code></p>
+<h3 id="2、表级锁"><a href="#2、表级锁" class="headerlink" title="2、表级锁"></a>2、表级锁</h3><h4 id="2-1-介绍"><a href="#2-1-介绍" class="headerlink" title="2.1 介绍"></a>2.1 介绍</h4><p>​    表级锁是MySQL中锁定粒度最大的一种锁，表示对当前操作的整张表加锁，它实现简单，资源消耗较少，被大部分MySQL引擎支持。最常使用的MYISAM与INNODB都支持表级锁定。表级锁定分为<strong>表共享读锁（共享锁）</strong>与<strong>表独占写锁（排他锁）</strong>。</p>
+<h4 id="2-2-特点"><a href="#2-2-特点" class="headerlink" title="2.2 特点"></a>2.2 特点</h4><p>开销小，加锁快；不会出现死锁；锁定粒度大，发出锁冲突的概率最高，并发度最低。</p>
+<h3 id="3、页级锁"><a href="#3、页级锁" class="headerlink" title="3、页级锁"></a>3、页级锁</h3><h4 id="3-1-介绍"><a href="#3-1-介绍" class="headerlink" title="3.1 介绍"></a>3.1 介绍</h4><p>​    页级锁是MySQL中锁定粒度介于行级锁和表级锁中间的一种锁.表级锁速度快，但冲突多，行级冲突少，但速度慢。所以取了折衷的页级，一次锁定相邻的一组记录。BDB支持页级锁。</p>
+<h4 id="3-2-特点"><a href="#3-2-特点" class="headerlink" title="3.2 特点"></a>3.2 特点</h4><p>开销和加锁时间界于表锁和行锁之间；会出现死锁；锁定粒度界于表锁和行锁之间，并发度一般</p>
+<h3 id="4、MySQL常用存储引擎的锁机制"><a href="#4、MySQL常用存储引擎的锁机制" class="headerlink" title="4、MySQL常用存储引擎的锁机制"></a>4、MySQL常用存储引擎的锁机制</h3><blockquote>
+<p>MyISAM和MEMORY采用表级锁(table-level locking)</p>
+<p>BDB采用页面锁(page-level locking)或表级锁，默认为页面锁</p>
+<p>InnoDB支持行级锁(row-level locking)和表级锁,默认为行级锁</p>
+</blockquote>
+<h3 id="5、Innodb中的行锁与表锁"><a href="#5、Innodb中的行锁与表锁" class="headerlink" title="5、Innodb中的行锁与表锁"></a>5、Innodb中的行锁与表锁</h3><p>前面提到过，在Innodb引擎中既支持行锁也支持表锁，那么什么时候会锁住整张表，什么时候或只锁住一行呢？</p>
+<p>InnoDB行锁是通过给索引上的索引项加锁来实现的，这一点MySQL与Oracle不同，后者是通过在数据块中对相应数据行加锁来实现的。InnoDB这种行锁实现特点意味着：只有通过索引条件检索数据，InnoDB才使用行级锁，否则，InnoDB将使用表锁！</p>
+<p>在实际应用中，要特别注意InnoDB行锁的这一特性，不然的话，可能导致大量的锁冲突，从而影响并发性能。</p>
+<p>行级锁都是基于索引的，如果一条SQL语句用不到索引是不会使用行级锁的，会使用表级锁。行级锁的缺点是：由于需要请求大量的锁资源，所以速度慢，内存消耗大。</p>
+<h3 id="6、行级锁与死锁"><a href="#6、行级锁与死锁" class="headerlink" title="6、行级锁与死锁"></a>6、行级锁与死锁</h3><p>MyISAM中是不会产生死锁的，因为MyISAM总是一次性获得所需的全部锁，要么全部满足，要么全部等待。而在InnoDB中，锁是逐步获得的，就造成了死锁的可能。</p>
+<p>在MySQL中，行级锁并不是直接锁记录，而是锁索引。索引分为主键索引和非主键索引两种，如果一条sql语句操作了主键索引，MySQL就会锁定这条主键索引；如果一条语句操作了非主键索引，MySQL会先锁定该非主键索引，再锁定相关的主键索引。 在UPDATE、DELETE操作时，MySQL不仅锁定WHERE条件扫描过的所有索引记录，而且会锁定相邻的键值，即所谓的next-key locking。</p>
+<p>当两个事务同时执行，一个锁住了主键索引在等待其他相关索引，一个锁定了非主键索引，在等待主键索引。这样就会发生死锁。</p>
+<p>发生死锁后，InnoDB一般都可以检测到，并使一个事务释放锁回退，另一个获取锁完成事务。</p>
+<h3 id="7、避免死锁"><a href="#7、避免死锁" class="headerlink" title="7、避免死锁"></a>7、<strong>避免死锁</strong></h3><p>（1）如果不同程序会并发存取多个表，尽量约定以相同的顺序访问表，可以大大降低死锁机会。</p>
+<p>（2）在同一个事务中，尽可能做到一次锁定所需要的所有资源，减少死锁产生概率；</p>
+<p>（3）对于非常容易产生死锁的业务部分，可以尝试使用升级锁定颗粒度，通过表级锁定来减少死锁产生的概率；</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>（1）mysql文档：</p>
+<p><a href="http://c.biancheng.net/mysql/mysql/10/" target="_blank" rel="noopener">http://c.biancheng.net/mysql/mysql/10/</a></p>
+<p>（2）视图：</p>
+<p><a href="https://www.bilibili.com/video/BV1Et411W7Ne?from=search&amp;seid=15687591199778631013" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Et411W7Ne?from=search&amp;seid=15687591199778631013</a></p>
+<p>（3）乐观锁和悲观锁：</p>
+<p><a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1589983506&amp;ver=2350&amp;signature=EdESyf0kl2cIW*ymOJzepw1h8xUn9-M4USye4aztLR*8YN*Jt5fYAEq9NTtLXvNFMic7lu8p2Ofj4T1gDWgeffc9QFkX8b5lETYlyKR1IU2Fj*Z8rwrCQ-2JUUmKjHlC&amp;new=1" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?src=11&amp;timestamp=1589983506&amp;ver=2350&amp;signature=EdESyf0kl2cIW*ymOJzepw1h8xUn9-M4USye4aztLR*8YN*Jt5fYAEq9NTtLXvNFMic7lu8p2Ofj4T1gDWgeffc9QFkX8b5lETYlyKR1IU2Fj*Z8rwrCQ-2JUUmKjHlC&amp;new=1</a></p>
+<p>（4）行级锁、表级锁、页级锁：</p>
+<p><a href="https://mp.weixin.qq.com/s?src=3&amp;timestamp=1589984873&amp;ver=1&amp;signature=MkUMueTxX*-lE-wgS0Jupo67LsauoCpNLhW77Vy5IxdYGEhGY5yyJ*YvGH69HTFnprQdbOYU57-HQ5xWoydslE0BVKMJBnyLViPBnL1lhlquQTJ8byeTd9IGC4QvKS2vNbQlOVuGbdapKbJ7jfi1xw==" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?src=3&amp;timestamp=1589984873&amp;ver=1&amp;signature=MkUMueTxX*-lE-wgS0Jupo67LsauoCpNLhW77Vy5IxdYGEhGY5yyJ*YvGH69HTFnprQdbOYU57-HQ5xWoydslE0BVKMJBnyLViPBnL1lhlquQTJ8byeTd9IGC4QvKS2vNbQlOVuGbdapKbJ7jfi1xw==</a></p>
+<p>（5）MySQL菜鸟文档：</p>
+<p><a href="https://www.runoob.com/mysql/mysql-group-by-statement.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-group-by-statement.html</a></p>
 
   </article>
 
@@ -775,7 +978,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1589965121462"></script>-->
+<!--<script src="/js/app.js?v=1590122440070"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
