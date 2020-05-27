@@ -60,7 +60,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/05/08/Java%E9%9B%86%E5%90%88/1589785314844.png">
 <meta property="og:image" content="http://yoursite.com/2020/05/08/Java%E9%9B%86%E5%90%88/1589815564905.png">
 <meta property="article:published_time" content="2020-05-08T05:47:52.000Z">
-<meta property="article:modified_time" content="2020-05-23T09:20:56.432Z">
+<meta property="article:modified_time" content="2020-05-26T15:32:05.618Z">
 <meta property="article:author" content="Mr.wang">
 <meta property="article:tag" content="JavaSE">
 <meta property="article:tag" content="Java集合">
@@ -68,7 +68,7 @@
 <meta name="twitter:image" content="http://yoursite.com/2020/05/08/Java%E9%9B%86%E5%90%88/1587477791411.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1590388344446">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1590548077878">-->
 
    
     <style>
@@ -260,7 +260,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月08日</a>
-    <a><i class="nexmoefont icon-areachart"></i>3.9k 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>4k 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 17 分钟</a>
 </div>
 
@@ -325,11 +325,14 @@
 <li>如果要模拟栈，队列等结构，建议选择LinkedList</li>
 </ul>
 <p>（5）比父类 Collection 新增了add()，remove()，indexOf()，subList()，get()，set()等方法。</p>
-<h3 id="2、Vector集合-（Vector：向量）（过时，不建议使用）"><a href="#2、Vector集合-（Vector：向量）（过时，不建议使用）" class="headerlink" title="2、Vector集合 （Vector：向量）（过时，不建议使用）"></a>2、Vector集合 （Vector：向量）（过时，不建议使用）</h3><p>（1）底层：数组。（JDK1.0）(线程安全，效率低)（Vector被ArrayList替代，其子类Stack被LinkedList替代）</p>
+<h3 id="2、Vector集合-（Vector：向量）（过时，不建议使用）"><a href="#2、Vector集合-（Vector：向量）（过时，不建议使用）" class="headerlink" title="2、Vector集合 （Vector：向量）（过时，不建议使用）"></a>2、Vector集合 （Vector：向量）（过时，不建议使用）</h3><p>（1）底层：可变长度数组。（JDK1.0）(线程安全，效率低)（Vector被ArrayList替代，其子类Stack被LinkedList替代）</p>
 <p>（2）子类：Stack（栈）</p>
+<p>（3）Vector每次扩容容量是翻倍，即为原来的2倍。</p>
 <p><img data-sizes="auto" data-src="/2020/05/08/Java%E9%9B%86%E5%90%88/1589730245159.png" alt="58973024515" class="lazyload"></p>
 <h3 id="3、ArrayList集合"><a href="#3、ArrayList集合" class="headerlink" title="3、ArrayList集合"></a>3、ArrayList集合</h3><p>作为List接口的实现类，（只）将List接口中的方法全部实现。（JDK1.2的版本的类）（线程不安全，效率高）</p>
-<p>（1）底层结构：采用可变长度的数组的结构来实现list。因此也叫动态数组。</p>
+<p>（1）底层结构：采用可变长度的数组的结构来实现list。因此也叫动态数组。每次扩容容量是1.5倍.</p>
+<p>原始的为空数组，当添加数据后，变为长度为10，当添加第11个数据时，扩容1.5倍。</p>
+<p>（扩容容量的计算:int newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1),其中oldCapacity是原来的容量大小，oldCapacity &gt;&gt; 1 为位运算的右移操作，右移一位相当于除以2，即扩容1.5倍。）</p>
 <p>（2）特点总结：ArrayList相当于一个可变长度的数组，查询快，增删慢。</p>
 <p><img data-sizes="auto" data-src="/2020/05/08/Java%E9%9B%86%E5%90%88/1589724124470.png" alt="58972412447" class="lazyload"></p>
 <p>（3）数组的最大特点：内存连续。——-&gt;   因此：访问数组快</p>
@@ -415,7 +418,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">TreeSet&lt;String&gt; set = <span class="keyword">new</span> TreeSet&lt;&gt;();</span><br><span class="line">set.add(<span class="string">"aaa"</span>);set.add(<span class="string">"bbb"</span>);set.add(<span class="string">"ccc"</span>);set.add(<span class="string">"ddd"</span>);set.add(<span class="string">"eee"</span>);		<span class="comment">//得到[aaa,bbb,ccc,ddd,eee]</span></span><br><span class="line">set.first();	  <span class="comment">//获取集合的第一个元素</span></span><br><span class="line">set.last()；		<span class="comment">//获取集合的最后一个元素。</span></span><br><span class="line">set.ceiling(<span class="string">"bbc"</span>);		<span class="comment">//得到"ccc"。向上取整。即若参数不存在，获取参数后的元素，举例"ccc"得到"ccc"；若参数存在，获取参数本身的数据,举例"bbc"得到"ccc"。</span></span><br><span class="line">set.floor(<span class="string">"bbc"</span>);	<span class="comment">//得到"bbb"。即向下取整。</span></span><br><span class="line">set.higher(<span class="string">"ccc"</span>);	<span class="comment">//得到"ddd"。即得到比它大的中最小的那个。</span></span><br><span class="line">set.lower(<span class="string">"ccc"</span>);	<span class="comment">//得到"bbb"。即得到比它小的中最大的那个。</span></span><br><span class="line">set.headSet(<span class="string">"ccc"</span>);		<span class="comment">//得到[aaa,bbb]。取比它小的但不包含它</span></span><br><span class="line">set.tailSet(<span class="string">"ccc"</span>);		<span class="comment">//得到[ccc,ddd,eee]。取比它大的包含自己。</span></span><br><span class="line">set.subSet(<span class="string">"bbb"</span>,<span class="string">"ddd"</span>);	<span class="comment">//得到[bbb,ccc]。获取区间内的，包含前面的，不包含后面的。</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="3、HashSet集合"><a href="#3、HashSet集合" class="headerlink" title="3、HashSet集合"></a>3、HashSet集合</h3><p>（无序的集合 / 散列存储 / 集合的顺序和存储顺序基本不一致，即随机（而LinkedHashSet集合的顺序和存储的顺序一致））（不能重复）</p>
-<p>（1）底层：哈希表实现。它不保证迭代的顺序。特别是不保证顺序一直不变。</p>
+<p>（1）底层：哈希表实现。它不保证存储（迭代）的顺序。</p>
 <p>（2）真正判断元素是否是重复，是否是相同的：看equals()。</p>
 <p>​    Object类：equals() –&gt; boolean，判断对象是否相等。</p>
 <p>（3）重点！！！HashSet集合去重：</p>
@@ -636,7 +639,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1590388344448"></script>-->
+<!--<script src="/js/app.js?v=1590548077879"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>

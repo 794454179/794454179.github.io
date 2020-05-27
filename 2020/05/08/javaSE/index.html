@@ -42,14 +42,14 @@
 <meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/F:%5Cblog%5Csource_posts%5CJavaSE%5C1589876821182.png">
 <meta property="og:image" content="http://yoursite.com/2020/05/08/javaSE/1589877769913.png">
 <meta property="article:published_time" content="2020-05-08T12:46:25.000Z">
-<meta property="article:modified_time" content="2020-05-19T08:58:41.248Z">
+<meta property="article:modified_time" content="2020-05-25T10:30:15.876Z">
 <meta property="article:author" content="Mr.wang">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/05/08/javaSE/1588945722929.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1590388344457">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1590548077887">-->
 
    
     <style>
@@ -241,7 +241,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月08日</a>
-    <a><i class="nexmoefont icon-areachart"></i>3.1k 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>3.3k 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 14 分钟</a>
 </div>
 
@@ -327,7 +327,7 @@
 <li>StringBuilder线程不安全。效率比StringBuffer高一些。JDK1.5</li>
 </ul>
 </li>
-<li><h5 id="StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）"><a href="#StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）" class="headerlink" title="StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）"></a>StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;1.添加</span><br><span class="line">append(data)--&gt;StringBuffer，末尾追加。生活中的排队，都是默认排在队伍末尾</span><br><span class="line">insert(offset,data)--&gt;StringBuffer，插入数据。生活中的插队，在哪插入。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;2.删除</span><br><span class="line">delete(start,end)--&gt;StringBuffer，删除，从start下标开始，删除到end下标之前。包含start，但是不包含end。</span><br><span class="line">deleteCharAt(index)--&gt;StringBuffer,删除指定下标对应的字符。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;3.更改</span><br><span class="line">reverse()--&gt;StringBuffer，翻转一个字符串。</span><br><span class="line">setCharAt(index, char)--&gt;void，设置指定下标对应的字符。字符替换。</span><br><span class="line">setLength(newLength)--&gt;void，设置StringBuffer的字符串的长度。截取&#x2F;用空字符填充</span><br><span class="line">replace(start,end, str)--&gt;StringBuffer,替换指定区间的内容：[start,end)</span><br><span class="line">toString()--&gt;从StringBuffer类型，变为String类型。</span><br><span class="line">                                                  </span><br><span class="line">&#x2F;&#x2F;4.同String类相同</span><br><span class="line">length()--&gt;int，获取长度</span><br><span class="line">charAt(index)--&gt;char，获取给定index的字符</span><br><span class="line">indexOf(String)</span><br><span class="line">indexOf(String,fromIndex)</span><br><span class="line">lastIndexOf(String)</span><br><span class="line">lastIndexOf(String,fromIndex)</span><br><span class="line">substring(begin)</span><br><span class="line">substring(begin,end)</span><br></pre></td></tr></table></figure>
+<li><h5 id="StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）"><a href="#StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）" class="headerlink" title="StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）"></a>StringBuffer的常用方法（StringBuilder类提供的方法，和StringBuffer功能相同）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;1.添加</span><br><span class="line">append(data)--&gt;StringBuffer，末尾追加。生活中的排队，都是默认排在队伍末尾</span><br><span class="line">insert(offset,data)--&gt;StringBuffer，插入数据。生活中的插队，在哪插入。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;2.删除</span><br><span class="line">delete(start,end)--&gt;StringBuffer，删除，从start下标开始，删除到end下标之前。包含start，但是不包含end。</span><br><span class="line">deleteCharAt(index)--&gt;StringBuffer,删除指定下标对应的字符。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;3.更改</span><br><span class="line">reverse()--&gt;StringBuffer，翻转一个字符串。</span><br><span class="line">setCharAt(index, char)--&gt;void，设置指定下标对应的字符。字符替换。</span><br><span class="line">setLength(newLength)--&gt;void，设置StringBuffer的字符串的长度。截取&#x2F;用空字符填充</span><br><span class="line">replace(start,end, str)--&gt;StringBuffer,替换指定区间的内容：[start,end)</span><br><span class="line">toString()--&gt;从StringBuffer类型，变为String类型。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;4.同String类相同</span><br><span class="line">length()--&gt;int，获取长度</span><br><span class="line">charAt(index)--&gt;char，获取给定index的字符</span><br><span class="line">indexOf(String)</span><br><span class="line">indexOf(String,fromIndex)    返回指定字符在此字符串中最后一次出现处的索引，从指定的索引处开始进行正向搜索，如果此字符串中没有这样的字符，则返回 -1。</span><br><span class="line">lastIndexOf(String)</span><br><span class="line">lastIndexOf(String,fromIndex)    返回指定字符在此字符串中最后一次出现处的索引，从指定的索引处开始进行反向搜索，如果此字符串中没有这样的字符，则返回 -1。</span><br><span class="line">substring(begin)</span><br><span class="line">substring(begin,end)  截取字串的一部分，begin为左起始位数，end为截取几位。</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -385,12 +385,7 @@
 <li>面向连接，数据传递的时候很安全。    <ul>
 <li>三次握手，四次挥手。</li>
 <li>因为面向连接，所以传递的效率较低。</li>
-<li>面向连接，数据安全的。可以传递大量的数据。</li>
-</ul>
-</li>
-<li>服务端和客户端    <ul>
-<li>服务端：提供服务的    </li>
-<li>客户端：来访问服务端，获取数据        <ul>
+<li>面向连接，数据安全的。可以传递大量的数据。<pre><code>服务端和客户端    </code></pre>   服务端：提供服务的<br>   客户端：来访问服务端，获取数据        <ul>
 <li>客户端登录，数据下载，文件传输。。</li>
 </ul>
 </li>
@@ -480,7 +475,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1590388344458"></script>-->
+<!--<script src="/js/app.js?v=1590548077889"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>

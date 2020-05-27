@@ -46,14 +46,14 @@
 <meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589984387774.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/24/MySql/1589984429006.png">
 <meta property="article:published_time" content="2020-04-24T09:41:22.000Z">
-<meta property="article:modified_time" content="2020-05-20T15:33:59.600Z">
+<meta property="article:modified_time" content="2020-05-25T14:57:27.956Z">
 <meta property="article:author" content="Mr.wang">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/04/24/MySql/1589902411274.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1590388344521">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1590548077948">-->
 
    
     <style>
@@ -871,7 +871,7 @@
 <p>​    乐观锁每次在执行数据的修改操作时，都会带上一个版本号，一旦版本号和数据的版本号一致就可以执行修改操作并对版本号执行+1操作，否则就执行失败。因为每次操作的版本号都会随之增加，所以不会出现ABA问题，因为版本号只会增加不会减少。</p>
 <p><img data-sizes="auto" data-src="/2020/04/24/MySql/1589984429006.png" alt="58998442900" class="lazyload"></p>
 <p>除了version以外，还可以使用时间戳，因为时间戳天然具有顺序递增性。</p>
-<p>（4）以上SQL其实还是有一定的问题的，就是<strong>一旦发上高并发的时候，就只有一个线程可以修改成功，那么就会存在大量的失败。</strong></p>
+<p>（4）以上SQL其实还是有一定的问题的，就是<strong>一旦发生高并发的时候，就只有一个线程可以修改成功，那么就会存在大量的失败。</strong></p>
 <p>对于像淘宝这样的电商网站，高并发是常有的事，总让用户感知到失败显然是不合理的。所以，还是要想办法减少乐观锁的粒度的。</p>
 <p>有一条比较好的建议，可以减小乐观锁力度，最大程度的提升吞吐率，提高并发能力！如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;修改商品库存</span><br><span class="line">update item </span><br><span class="line">set quantity&#x3D;quantity - 1 </span><br><span class="line">where id &#x3D; 1 and quantity - 1 &gt; 0</span><br></pre></td></tr></table></figure>
@@ -978,7 +978,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1590388344523"></script>-->
+<!--<script src="/js/app.js?v=1590548077949"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
